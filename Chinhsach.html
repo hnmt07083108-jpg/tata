@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách</title>  
+  <script src="../js/initialization.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/topbar.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/search.css"/>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/product-detail.css"/>  
+  <link rel="stylesheet" href="../css/home-responsive.css">
+  <link rel="stylesheet" href="../css/header-responsive.css">
+  <link rel="stylesheet" href="../css/products-responsive.css">
+  <link rel="stylesheet" href="../css/footer-responsive.css">
+  <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/account-management.css"/>
+  <link rel="stylesheet" href="../css/product-list.css"/>
+  <script src="../js/notifition.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ 
+    
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-bar-content">
+        IP25K - GIẢM NGAY 25K CHO ĐƠN HÀNG 99K 
+        NHẬP MÃ T04FREESHIP20K - GIẢM NGAY 20K
+    </div>
+</div>
+<div>
+  <div class="header">
+    <!-- MENU TRÊN -->
+    <!-- MAIN -->
+    <div class="header-main">
+        <!-- HAMBURGER MENU (Mobile) -->
+        <button class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- LOGO -->
+        <div class="logo">
+    <img src="../images/LOGO3.png" alt="logo">
+  </div>
+  <div class="search-box position-relative">
+    <i class="fa fa-search"></i>
+    <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm..." autocomplete="off">
+    <div id="searchDropdown" class="search-dropdown">
+        <div id="boxSP">
+        <h4 style="letter-spacing: 1px; font-weight: 700; font-family: Arial, sans-serif;">TỪ KHÓA GỢI Ý</h4>
+        <ul id="listTuKhoa" class="suggested-keywords" style="margin-bottom: 20px;"></ul>
+
+        <h4 style="letter-spacing: 1px; font-weight: 700; font-family: Arial, sans-serif;">SẢN PHẨM LIÊN QUAN</h4>
+        <div id="listSanPham" class="search-product-list"></div>
+        </div>
+    </div>
+  </div>
+  <script src="../js/search.js"></script>
+  <div>
+    <div class="header-middle-right">
+      <ul class="header-middle-right-list">
+            <li class="header-middle-right-item dropdown">
+              <i class="fa-light fa-user"></i>
+              <div class="auth-container">
+                <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+              </div>
+              <ul class="header-middle-right-menu">
+                <li><a id="login" href="javascript:;"><i class="fa-light fa-right-to-bracket"></i> Đăng nhập</a></li>
+                <li><a id="signup" href="javascript:;"><i class="fa-light fa-user-plus"></i> Đăng ký</a></li>
+              </ul>
+            </li>
+            <li class="header-middle-right-item" onclick="openCart()">
+              <div class="cart-icon-menu">
+                <i class="fa-light fa-basket-shopping"></i>
+                <span class="count-product-cart">0</span>
+              </div>
+              <span>Giỏ hàng</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal signup-login">
+        <div class="modal-container">
+          <button class="form-close" onclick="closeModal()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+          <div class="forms mdl-cnt">
+            <div class="form-content sign-up">
+        <h3 class="form-title">Đăng ký tài khoản</h3>
+        <p class="form-description">Đăng ký thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi </p>
+        <form action="" class="signup-form">
+          <div class="form-group">
+            <label for="fullname" class="form-label">Tên đầy đủ</label>
+            <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Sinh" class="form-control">
+            <span class="form-message-name form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input id="phone" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+            <span class="form-message-phone form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message-password form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+            <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+            <span class="form-message-password-confi form-message"></span>
+          </div>
+          <div class="form-group">
+            <input class="checkbox" name="checkbox" required="" type="checkbox" id="checkbox-signup">
+            <label for="checkbox-signup" class="form-checkbox"><a href="#"title="Tôi đồng ý với chính sách trang web" target="_blank">Tôi đồng ý với chính sách trang web</a></label>
+            <p class="form-message-checkbox form-message"></p>
+          </div>
+          <button class="form-submit" id="signup-button">Đăng ký</button>
+        </form>
+        <p class="change-login">Bạn đã có tài khoản ? <a href="javascript:;" class="login-link">Đăng nhập ngay</a></p>
+      </div>
+      <div class="form-content login">
+        <h3 class="form-title">Đăng nhập tài khoản</h3>
+        <p class="form-description">Đăng nhập thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúngtôi</p>
+        <form action="" class="login-form">
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input id="phone-login" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+            <span class="form-message phonelog"></span>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password-login" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message-check-login form-message"></span>
+          </div>
+          <button class="form-submit" id="login-button">Đăng nhập</button>
+        </form>
+        <p class="change-login">Bạn chưa có tài khoản ? <a href="javascript:;" class="signup-link">Đăng kí ngay</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-cart">
+  <div class="cart-container">
+    <div class="cart-header">
+        <h3 class="cart-header-title"><i class="fa-light fa-basket-shopping"></i> Giỏ hàng của bạn</h3>
+        <button class="cart-close" onclick="closeCart()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body">
+        <div class="gio-hang-trong">
+            <i class="fa-thin fa-cart-xmark"></i>
+            <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
+        </div>
+        <ul class="cart-list">
+        </ul>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total-price">
+            <p class="text-tt">Tổng tiền:</p>
+            <p class="text-price">0đ</p>
+        </div>
+        <div class="cart-footer-payment">
+            <button class="them-mon"><i class="fa-regular fa-plus"></i> Thêm món</button>
+            <button class="thanh-toan disabled">Thanh toán</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+  <header class="header-nav">
+    <div class="nav-container">
+        <div class="nav-item-wrap">
+            <a href="Trangchu.html" class="nav-item"><i class="fa-solid fa-house"></i> TRANG CHỦ</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="khuyenmai.html?promo=sale-50" class="nav-item">🔥 KHUYẾN MÃI HOT 🔥 <i class="fa-solid fa-angle-down" style="font-size: 11px;"></i></a>
+            <div class="simple-dropdown">
+                <ul>
+                    <li><a href="khuyenmai.html#top-sales">Sale Xập Xình</a></li>
+                    <li><a href="khuyenmai.html#mua-la-co-qua">Mua là có quà</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Sanpham.html" class="nav-item">SẢN PHẨM <i class="fa-solid fa-angle-down" style="font-size: 11px;"></i></a>
+            <div class="simple-dropdown">
+                <ul>
+                        <li><a href="Sanpham.html?category=Nước%20hoa">Nước hoa</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20cơ%20thể">Chăm sóc cơ thể</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20tóc">Chăm sóc tóc</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20da%20mặt">Chăm sóc da mặt</a></li>
+                         <li><a href="Sanpham.html?category=Trang%20điểm">Trang điểm</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Gioithieu.html" class="nav-item">GIỚI THIỆU</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Lienhe.html" class="nav-item">LIÊN HỆ</a>
+        </div>
+        </header>
+</div>
+
+<!-- MOBILE SIDEBAR MENU -->
+<div class="mobile-sidebar-overlay"></div>
+<div class="mobile-sidebar">
+    <div class="mobile-search-box">
+        <input type="text" id="mobileSearchInput" placeholder="Tìm sản phẩm..." autocomplete="off">
+    </div>
+    
+    <ul class="mobile-nav-menu">
+        <li class="mobile-nav-item">
+            <a href="Trangchu.html"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="khuyenmai.html?promo=sale-50"><i class="fa-solid fa-fire"></i> Khuyến Mãi Hot</a>
+        </li>
+        <li class="mobile-nav-item has-submenu">
+            <a href="javascript:;"><i class="fa-solid fa-bag-shopping"></i> Sản Phẩm</a>
+            <ul class="mobile-submenu">
+                <li><a href="Sanpham.html?category=Nước%20hoa">Nước Hoa</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20cơ%20thể">Chăm Sóc Cơ Thể</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20tóc">Chăm Sóc Tóc</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20da%20mặt">Chăm Sóc Da Mặt</a></li>
+                <li><a href="Sanpham.html?category=Trang%20điểm">Trang Điểm</a></li>
+            </ul>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="Gioithieu.html"><i class="fa-solid fa-circle-info"></i> Giới Thiệu</a>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="Lienhe.html"><i class="fa-solid fa-phone"></i> Liên Hệ</a>
+        </li>
+    </ul>
+</div>
+
+<!--DANH MỤC-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Menu Hoàn Chỉnh Toàn Diện</title>
+    <style>
+        /* ================= CÀI ĐẶT CHUNG ================= */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
+        :root {
+            --orange-main: #ff6600; /* Màu cam chuẩn */
+            --bg-sidebar: #f7f7f7;
+            --text-dark: #333;
+            --text-light: #555;
+            --border-line: #eaeaea;
+        }
+
+
+        /* ================= THANH MENU CAM CHÍNH ================= */
+        .header-nav {
+            background-color: var(--orange-main);
+            height: 48px;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .nav-container {
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Dàn đều các mục */
+            position: relative; /* Chuẩn để thả Mega Menu */
+        }
+
+
+        /* Gói từng nút. Nút nào có Mega Menu thì position: static. Nút menu nhỏ thì position: relative */
+        .nav-item-wrap { height: 100%; display: flex; align-items: center; cursor: pointer; }
+        .nav-item-wrap.has-mega { position: static; }
+        .nav-item-wrap.has-simple { position: relative; }
+
+
+        .nav-item {
+            color: #fff; text-decoration: none; font-weight: bold; font-size: 14px;
+            padding: 0 15px; height: 100%; display: flex; align-items: center; text-transform: uppercase;
+            transition: 0.2s; gap: 6px;
+        }
+        .nav-item:hover { color: #ffe0b2; }
+        .nav-item i { font-size: 15px; }
+
+
+        /* ================= 1. BẢNG MEGA MENU (DANH MỤC) ================= */
+        .mega-menu {
+            position: absolute; top: 48px; left: 0; width: 100%;
+            background-color: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex; min-height: 450px; visibility: hidden; opacity: 0; transition: 0.2s; z-index: 1000;
+            border: 1px solid var(--border-line); border-top: none;
+        }
+        .nav-item-wrap.has-mega:hover .mega-menu { visibility: visible; opacity: 1; }
+
+
+        /* Cột Sidebar Trái Mega Menu */
+        .mega-sidebar { width: 240px; background-color: var(--bg-sidebar); border-right: 1px solid var(--border-line); }
+        .mega-sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .mega-tab { padding: 12px 20px; font-size: 14px; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-line); }
+        .mega-tab i { font-size: 12px; color: transparent; }
+        .mega-tab:hover, .mega-tab.active { background-color: #fff; color: var(--orange-main); font-weight: bold; }
+        .mega-tab:hover i, .mega-tab.active i { color: var(--orange-main); }
+
+
+        /* Cột Phải Mega Menu */
+        .mega-content { flex: 1; padding: 20px 30px; background-color: #fff; }
+        .mega-pane { display: none; }
+        .mega-pane.active { display: block; animation: fadeIn 0.3s; }
+        .mega-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; align-items: start; }
+        .menu-group { margin-bottom: 25px; }
+        .menu-group h4 { font-size: 13px; font-weight: bold; color: #000; text-transform: uppercase; margin: 0 0 12px 0; }
+        .menu-group ul { list-style: none; padding: 0; margin: 0; }
+        .menu-group li { margin-bottom: 10px; }
+        .menu-group a { text-decoration: none; color: var(--text-light); font-size: 13px; }
+        .menu-group a:hover { color: var(--orange-main); }
+
+
+        /* ================= 2. MENU THẢ XUỐNG NHỎ (CÁC MỤC CÒN LẠI) ================= */
+        .simple-dropdown {
+            position: absolute; top: 48px; left: 0; min-width: 200px;
+            background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            visibility: hidden; opacity: 0; transition: 0.2s; z-index: 999;
+            border: 1px solid var(--border-line); border-top: none;
+        }
+        .nav-item-wrap.has-simple:hover .simple-dropdown { visibility: visible; opacity: 1; }
+        .simple-dropdown ul { list-style: none; padding: 0; margin: 0; }
+        .simple-dropdown li { border-bottom: 1px solid var(--border-line); }
+        .simple-dropdown li:last-child { border-bottom: none; }
+        .simple-dropdown a { display: block; padding: 12px 15px; color: var(--text-dark); text-decoration: none; font-size: 13px; font-weight: normal; }
+        .simple-dropdown a:hover { color: var(--orange-main); background-color: #fff9f5; padding-left: 20px; transition: 0.2s; }
+
+
+        /* Form Tra Cứu Đơn Hàng */
+        .order-form { padding: 15px; min-width: 250px; right: 0; left: auto; }
+        .order-form input { width: 100%; padding: 8px 10px; margin-bottom: 10px; border: 1px solid #ccc; box-sizing: border-box; outline: none; font-size: 13px;}
+        .order-form input:focus { border-color: var(--orange-main); }
+        .order-form button { width: 100%; padding: 10px; background-color: var(--orange-main); color: #fff; border: none; font-weight: bold; cursor: pointer; }
+        .order-form button:hover { background-color: #e65c00; }
+
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Menu Theo Yêu Cầu Mới</title>
+    <style>
+
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
+        :root {
+            --orange-main: #ff6600;
+            --text-dark: #333;
+            --border-line: #eaeaea;
+        }
+
+
+        .header-nav {
+            background-color: var(--orange-main);
+            height: 48px;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .nav-container {
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+
+        .nav-item-wrap { height: 100%; display: flex; align-items: center; cursor: pointer; position: relative; }
+
+
+        .nav-item {
+            color: #fff; text-decoration: none; font-weight: bold; font-size: 14px;
+            padding: 0 15px; height: 100%; display: flex; align-items: center; text-transform: uppercase;
+            transition: 0.2s; gap: 6px;
+        }
+        .nav-item:hover { color: #ffe0b2; }
+        .nav-item i { font-size: 15px; }
+
+
+
+
+        .simple-dropdown {
+            position: absolute; top: 48px; left: 0; min-width: 220px;
+            background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            visibility: hidden; opacity: 0; transition: 0.2s; z-index: 999;
+            border: 1px solid var(--border-line); border-top: none;
+        }
+       
+        .nav-item-wrap:hover .simple-dropdown { visibility: visible; opacity: 1; }
+       
+        .simple-dropdown ul { list-style: none; padding: 0; margin: 0; }
+        .simple-dropdown li { border-bottom: 1px solid var(--border-line); }
+        .simple-dropdown li:last-child { border-bottom: none; }
+        .simple-dropdown a { display: block; padding: 12px 15px; color: var(--text-dark); text-decoration: none; font-size: 13px; font-weight: normal; }
+        .simple-dropdown a:hover { color: var(--orange-main); background-color: #fff9f5; padding-left: 20px; transition: 0.2s; }
+
+
+    </style>
+</head>
+<body>
+    <style>
+        /* CSS tuỳ chỉnh cho giao diện Khung (Frame) */
+        :root {
+            --guardian-orange: #ff6600;
+            --sidebar-bg: #f5f5f5;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; }
+
+        /* Banner trên cùng */
+        .policy-banner {
+            background: linear-gradient(to right, #ff6600, #ff6600);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+            border-radius: 8px 8px 0 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        /* Khung bọc toàn bộ nội dung */
+        .policy-wrapper {
+            display: flex;
+            border: 2px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            min-height: 500px; /* Tương đương chiều cao 500 trong ảnh mẫu */
+        }
+
+        /* Khung trái (Sidebar Menu) */
+        .policy-sidebar {
+            width: 250px;
+            background-color: var(--sidebar-bg);
+            border-right: 2px solid #ddd;
+            padding: 20px 0;
+        }
+
+        .policy-sidebar h3 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #333;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .policy-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .policy-menu li {
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #555;
+            transition: 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .policy-menu li:hover { background-color: #e9ecef; color: var(--guardian-orange); }
+
+        /* Trạng thái đang chọn */
+        .policy-menu li.active {
+            background-color: #fff;
+            color: var(--guardian-orange);
+            border-left: 4px solid var(--guardian-orange);
+            font-weight: bold;
+        }
+
+        /* Khung phải (Nội dung) */
+        .policy-content-area {
+            flex: 1;
+            padding: 30px 40px;
+            background: #fff;
+        }
+
+        /* Ẩn tất cả nội dung mặc định */
+        .tab-content { display: none; animation: fadeIn 0.4s; }
+        /* Hiện nội dung được kích hoạt */
+        .tab-content.active { display: block; }
+
+        .tab-content h2 {
+            color: var(--guardian-orange);
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 2px dashed #ddd;
+            padding-bottom: 10px;
+        }
+
+        .tab-content p { font-size: 15px; line-height: 1.8; color: #333; text-align: justify; }
+        .tab-content img { max-width: 100%; border-radius: 8px; margin-top: 15px; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    
+
+        <div class="policy-wrapper">
+            <div class="policy-sidebar">
+                <h3>Danh mục</h3>
+                <ul class="policy-menu" id="policyMenu">
+                    <li class="active" onclick="switchTab('tab1', this)">Chính sách và quy định chung</li>
+                    <li class="active" onclick="switchTab('tab2', this)">Quy định thanh toán</li>
+                    <li class="active" onclick="switchTab('tab3', this)">Chính sách vận chuyển</li>
+                    <li class="active" onclick="switchTab('tab4', this)">Chính sách đổi trả</li>
+                    <li class="active" onclick="switchTab('tab5', this)">Bảo mật thông tin</li>
+                    <li class="active" onclick="switchTab('tab6', this)">Hướng dẫn mua hàng</li>
+                    <li class="active" onclick="switchTab('tab7', this)">Xuất hóa đơn</li>
+                    <li class="active" onclick="switchTab('tab8', this)">Điều khoản sử dụng</li>
+                </ul>
+            </div>
+            <script>
+function switchTab(tabId, element) {
+    // Ẩn tất cả tab
+    document.querySelectorAll('.tab-content')
+        .forEach(tab => tab.classList.remove('active'));
+
+    // Bỏ active menu
+    document.querySelectorAll('.policy-menu li')
+        .forEach(item => item.classList.remove('active'));
+
+    // Hiện tab được chọn
+    document.getElementById(tabId).classList.add('active');
+
+    // Active menu
+    if(element){
+        element.classList.add('active');
+    }
+
+    // cập nhật URL
+    window.location.hash = tabId;
+}
+
+// Khi load trang
+window.addEventListener('DOMContentLoaded', function () {
+
+    const hash = window.location.hash;
+
+    if(hash){
+        // Ẩn tất cả tab
+        document.querySelectorAll('.tab-content')
+            .forEach(tab => tab.classList.remove('active'));
+
+        // bỏ active menu
+        document.querySelectorAll('.policy-menu li')
+            .forEach(item => item.classList.remove('active'));
+
+        // hiện đúng tab
+        const tab = document.querySelector(hash);
+        if(tab){
+            tab.classList.add('active');
+        }
+
+        // active menu tương ứng
+        const menuItems = document.querySelectorAll('.policy-menu li');
+
+        const tabMap = {
+            '#tab1': 0,
+            '#tab2': 1,
+            '#tab3': 2,
+            '#tab4': 3,
+            '#tab5': 4,
+            '#tab6': 5,
+            '#tab7': 6,
+            '#tab8': 7
+        };
+
+        if(tabMap[hash] !== undefined){
+            menuItems[tabMap[hash]]
+                .classList.add('active');
+        }
+    }
+});
+</script>
+
+            <div class="policy-content-area">
+
+    <div class="policy-content-area">
+
+    <!-- TAB 1 -->
+    <div id="tab1" class="tab-content active">
+    <div class="policy-container">
+
+        <h2>Chính Sách và Quy Định Chung</h2>
+
+        <p>
+            Chào mừng Quý khách đến với hệ thống website của chúng tôi. 
+            Việc Quý khách truy cập và sử dụng website đồng nghĩa với việc Quý khách đã đồng ý với các điều khoản, điều kiện và quy định được nêu dưới đây.
+        </p>
+
+        <h3>1. Chấp thuận các Điều kiện Sử dụng</h3>
+        <p>
+            Khi truy cập vào website, Quý khách đồng ý tuân thủ tất cả các quy định và điều khoản hiện hành. 
+            Chúng tôi có quyền thay đổi, chỉnh sửa, bổ sung hoặc loại bỏ bất kỳ nội dung nào mà không cần thông báo trước.
+        </p>
+
+        <h3>2. Quy định về Tài khoản và Bảo mật</h3>
+        <ul>
+            <li>Quý khách cần cung cấp thông tin cá nhân chính xác, đầy đủ khi đăng ký tài khoản.</li>
+            <li>Chịu trách nhiệm bảo mật thông tin đăng nhập và mật khẩu.</li>
+            <li>Không chia sẻ tài khoản cho người khác sử dụng.</li>
+            <li>Thông báo ngay cho chúng tôi khi phát hiện có truy cập trái phép.</li>
+        </ul>
+
+        <h3>3. Quyền Sở hữu Trí tuệ</h3>
+        <p>
+            Toàn bộ nội dung trên website bao gồm hình ảnh, logo, văn bản, thiết kế… 
+            đều thuộc quyền sở hữu của hệ thống hoặc đối tác liên quan. 
+            Nghiêm cấm sao chép, sử dụng lại khi chưa có sự cho phép bằng văn bản.
+        </p>
+
+        <h3>4. Trách nhiệm của Người dùng</h3>
+        <ul>
+            <li>Không sử dụng website vào mục đích gian lận hoặc vi phạm pháp luật.</li>
+            <li>Không can thiệp vào hệ thống, phá hoại dữ liệu hoặc gây gián đoạn hoạt động website.</li>
+            <li>Không đăng tải nội dung sai sự thật, gây ảnh hưởng đến cá nhân hoặc tổ chức khác.</li>
+        </ul>
+
+        <h3>5. Điều khoản về Giao dịch</h3>
+        <p>
+            Chúng tôi có quyền từ chối hoặc hủy đơn hàng trong các trường hợp:
+        </p>
+        <ul>
+            <li>Thông tin đơn hàng không chính xác hoặc không đầy đủ.</li>
+            <li>Lỗi hệ thống về giá hoặc tồn kho.</li>
+            <li>Không thể liên hệ xác nhận đơn hàng.</li>
+        </ul>
+
+        <h3>6. Giới hạn trách nhiệm</h3>
+        <p>
+            Chúng tôi không chịu trách nhiệm đối với các thiệt hại phát sinh do lỗi từ phía người dùng 
+            hoặc các yếu tố ngoài tầm kiểm soát như lỗi mạng, sự cố kỹ thuật.
+        </p>
+
+        <h3>7. Điều khoản chung</h3>
+        <p>
+            Các điều khoản này được điều chỉnh theo quy định pháp luật hiện hành. 
+            Nếu có tranh chấp xảy ra, hai bên sẽ ưu tiên giải quyết bằng thương lượng, 
+            trong trường hợp không đạt được thỏa thuận sẽ đưa ra cơ quan có thẩm quyền giải quyết.
+        </p>
+
+        <div class="update-date">
+        </div>
+
+    </div>
+</div>
+
+    <!-- TAB 2 -->
+<div id="tab2" class="tab-content">
+    <h2>QUY ĐỊNH THANH TOÁN</h2>
+
+    <p>
+        Nhằm mang lại sự thuận tiện và trải nghiệm mua sắm tốt nhất, chúng tôi cung cấp nhiều hình thức thanh toán linh hoạt cho khách hàng lựa chọn.
+    </p>
+
+    <h3>1. Các hình thức thanh toán</h3>
+    <ul>
+        <li><b>Thanh toán khi nhận hàng (COD):</b> Khách hàng thanh toán trực tiếp cho nhân viên giao hàng khi nhận sản phẩm.</li>
+        <li><b>Chuyển khoản ngân hàng:</b> Khách hàng chuyển khoản theo thông tin tài khoản được cung cấp khi đặt hàng.</li>
+        <li><b>Thanh toán online:</b> Thực hiện thanh toán qua các cổng thanh toán điện tử (ví điện tử, thẻ ATM, thẻ tín dụng...).</li>
+    </ul>
+
+    <h3>2. Thời hạn thanh toán</h3>
+    <p>
+        Đối với hình thức chuyển khoản, khách hàng vui lòng hoàn tất thanh toán trong vòng <b>24 giờ</b> kể từ khi đặt hàng. 
+        Sau thời gian trên, nếu chưa nhận được thanh toán, đơn hàng có thể bị hủy tự động.
+    </p>
+
+    <h3>3. Xác nhận thanh toán</h3>
+    <p>
+        Sau khi thanh toán thành công, hệ thống sẽ gửi thông báo xác nhận qua email hoặc số điện thoại đã đăng ký. 
+        Trong trường hợp cần thiết, nhân viên chăm sóc khách hàng có thể liên hệ để xác nhận lại thông tin đơn hàng.
+    </p>
+
+    <h3>4. Lưu ý khi thanh toán</h3>
+    <ul>
+        <li>Vui lòng kiểm tra kỹ thông tin đơn hàng trước khi thực hiện thanh toán.</li>
+        <li>Không cung cấp thông tin thẻ hoặc tài khoản cho bên thứ ba không rõ nguồn gốc.</li>
+        <li>Giữ lại hóa đơn hoặc biên lai thanh toán để đối chiếu khi cần thiết.</li>
+    </ul>
+
+    <h3>5. Hoàn tiền</h3>
+    <p>
+        Trong trường hợp đơn hàng bị hủy hoặc phát sinh lỗi từ hệ thống, chúng tôi sẽ tiến hành hoàn tiền theo phương thức thanh toán ban đầu của khách hàng. 
+        Thời gian hoàn tiền có thể dao động từ <b>3 – 7 ngày làm việc</b> tùy theo ngân hàng hoặc cổng thanh toán.
+    </p>
+</div>
+
+    <!-- TAB 3 -->
+   <!-- TAB 3 -->
+<div id="tab3" class="tab-content">
+    <h2>CHÍNH SÁCH VẬN CHUYỂN</h2>
+
+    <p>
+        Chúng tôi cung cấp dịch vụ giao hàng trên toàn quốc với mong muốn mang sản phẩm đến tay khách hàng nhanh chóng và an toàn nhất.
+    </p>
+
+    <h3>1. Phạm vi giao hàng</h3>
+    <p>
+        Hỗ trợ giao hàng trên toàn quốc, bao gồm tất cả các tỉnh thành. 
+        Đối với khu vực nội thành, thời gian giao hàng sẽ nhanh hơn so với khu vực ngoại thành và vùng xa.
+    </p>
+
+    <h3>2. Thời gian giao hàng</h3>
+    <ul>
+        <li><b>Nội thành:</b> 1 – 3 ngày làm việc.</li>
+        <li><b>Ngoại thành / tỉnh:</b> 3 – 7 ngày làm việc.</li>
+    </ul>
+    <p>
+        Thời gian giao hàng có thể thay đổi tùy vào điều kiện thời tiết, lễ Tết hoặc các yếu tố khách quan khác.
+    </p>
+
+    <h3>3. Phí vận chuyển</h3>
+    <ul>
+        <li>Phí giao hàng sẽ được hiển thị cụ thể khi khách hàng tiến hành đặt hàng.</li>
+        <li>Miễn phí vận chuyển đối với đơn hàng đạt giá trị theo chương trình khuyến mãi từng thời điểm.</li>
+    </ul>
+
+    <h3>4. Kiểm tra hàng khi nhận</h3>
+    <p>
+        Khách hàng có quyền kiểm tra tình trạng sản phẩm trước khi thanh toán. 
+        Nếu phát hiện sản phẩm bị lỗi, hư hỏng hoặc không đúng đơn hàng, khách hàng có thể từ chối nhận hàng.
+    </p>
+
+    <h3>5. Trường hợp giao hàng không thành công</h3>
+    <ul>
+        <li>Nhân viên giao hàng không liên hệ được với khách hàng.</li>
+        <li>Thông tin địa chỉ không chính xác.</li>
+        <li>Khách hàng không nhận hàng sau nhiều lần liên hệ.</li>
+    </ul>
+    <p>
+        Trong các trường hợp trên, đơn hàng có thể bị hủy hoặc chuyển về kho lưu trữ.
+    </p>
+
+    <h3>6. Lưu ý</h3>
+    <ul>
+        <li>Vui lòng cung cấp địa chỉ và số điện thoại chính xác để đảm bảo giao hàng thành công.</li>
+        <li>Giữ liên lạc với đơn vị vận chuyển để nhận hàng đúng thời gian.</li>
+        <li>Không nhận hàng nếu bao bì bị rách, móp méo hoặc có dấu hiệu đã bị mở trước đó.</li>
+    </ul>
+</div>
+
+    <!-- TAB 4 -->
+    <!-- TAB 4 -->
+<div id="tab4" class="tab-content">
+    <h2>CHÍNH SÁCH ĐỔI TRẢ</h2>
+
+    <p>
+        Chúng tôi luôn cam kết mang đến cho khách hàng những sản phẩm chất lượng. 
+        Trong trường hợp sản phẩm gặp vấn đề, khách hàng có thể yêu cầu đổi hoặc trả hàng theo chính sách dưới đây.
+    </p>
+
+    <h3>1. Điều kiện đổi trả</h3>
+    <ul>
+        <li>Sản phẩm bị lỗi do nhà sản xuất (hư hỏng, móp méo, sai thông tin).</li>
+        <li>Giao sai sản phẩm, sai số lượng so với đơn hàng.</li>
+        <li>Sản phẩm còn nguyên vẹn, chưa qua sử dụng.</li>
+        <li>Còn đầy đủ bao bì, tem nhãn và hóa đơn mua hàng.</li>
+    </ul>
+
+    <h3>2. Thời gian áp dụng</h3>
+    <p>
+        Khách hàng có thể yêu cầu đổi/trả trong vòng <b>3 – 7 ngày</b> kể từ ngày nhận hàng 
+        (tùy theo từng sản phẩm và chương trình cụ thể).
+    </p>
+
+    <h3>3. Trường hợp không hỗ trợ đổi trả</h3>
+    <ul>
+        <li>Sản phẩm đã qua sử dụng hoặc bị hư hỏng do người dùng.</li>
+        <li>Không có hóa đơn hoặc chứng từ mua hàng.</li>
+        <li>Sản phẩm bị thay đổi tình trạng ban đầu (rách bao bì, thiếu phụ kiện...).</li>
+        <li>Yêu cầu đổi trả sau thời gian quy định.</li>
+    </ul>
+
+    <h3>4. Quy trình đổi trả</h3>
+    <ul>
+        <li>Bước 1: Liên hệ bộ phận chăm sóc khách hàng để yêu cầu đổi/trả.</li>
+        <li>Bước 2: Cung cấp thông tin đơn hàng và hình ảnh sản phẩm lỗi (nếu có).</li>
+        <li>Bước 3: Gửi sản phẩm về địa chỉ được hướng dẫn.</li>
+        <li>Bước 4: Sau khi kiểm tra, chúng tôi sẽ tiến hành đổi sản phẩm hoặc hoàn tiền.</li>
+    </ul>
+
+    <h3>5. Chi phí đổi trả</h3>
+    <ul>
+        <li>Miễn phí đổi trả nếu lỗi thuộc về nhà sản xuất hoặc do đơn vị vận chuyển.</li>
+        <li>Khách hàng chịu phí vận chuyển nếu đổi trả do nhu cầu cá nhân.</li>
+    </ul>
+
+    <h3>6. Hoàn tiền</h3>
+    <p>
+        Việc hoàn tiền sẽ được thực hiện sau khi sản phẩm được kiểm tra và xác nhận đủ điều kiện. 
+        Thời gian hoàn tiền từ <b>3 – 7 ngày làm việc</b> tùy theo phương thức thanh toán ban đầu.
+    </p>
+</div>
+
+    <!-- TAB 5 -->
+<div id="tab5" class="tab-content">
+    <h2>BẢO MẬT THÔNG TIN</h2>
+
+    <p>
+        Chúng tôi cam kết bảo mật tuyệt đối thông tin cá nhân của khách hàng khi sử dụng dịch vụ trên website. 
+        Việc thu thập và sử dụng thông tin chỉ nhằm mục đích nâng cao chất lượng dịch vụ và trải nghiệm mua sắm.
+    </p>
+
+    <h3>1. Mục đích thu thập thông tin</h3>
+    <ul>
+        <li>Xử lý đơn hàng và giao hàng đến khách hàng.</li>
+        <li>Cung cấp thông tin về sản phẩm, chương trình khuyến mãi.</li>
+        <li>Hỗ trợ chăm sóc khách hàng và giải quyết khiếu nại.</li>
+    </ul>
+
+    <h3>2. Phạm vi thu thập thông tin</h3>
+    <p>
+        Các thông tin cá nhân có thể được thu thập bao gồm:
+    </p>
+    <ul>
+        <li>Họ và tên</li>
+        <li>Số điện thoại</li>
+        <li>Địa chỉ giao hàng</li>
+        <li>Email</li>
+    </ul>
+
+    <h3>3. Phạm vi sử dụng thông tin</h3>
+    <p>
+        Thông tin khách hàng chỉ được sử dụng nội bộ trong hệ thống và không chia sẻ cho bên thứ ba, 
+        trừ các trường hợp cần thiết như:
+    </p>
+    <ul>
+        <li>Đơn vị vận chuyển để giao hàng.</li>
+        <li>Cơ quan chức năng khi có yêu cầu theo quy định pháp luật.</li>
+    </ul>
+
+    <h3>4. Thời gian lưu trữ thông tin</h3>
+    <p>
+        Thông tin khách hàng sẽ được lưu trữ trong hệ thống cho đến khi khách hàng yêu cầu xóa hoặc tự đăng nhập để chỉnh sửa/xóa thông tin.
+    </p>
+
+    <h3>5. Bảo mật thông tin</h3>
+    <ul>
+        <li>Chúng tôi áp dụng các biện pháp bảo mật để bảo vệ dữ liệu khách hàng.</li>
+        <li>Thông tin được lưu trữ trên hệ thống máy chủ an toàn.</li>
+        <li>Chỉ nhân viên có thẩm quyền mới được truy cập thông tin.</li>
+    </ul>
+
+    <h3>6. Quyền lợi của khách hàng</h3>
+    <ul>
+        <li>Yêu cầu kiểm tra, cập nhật hoặc xóa thông tin cá nhân.</li>
+        <li>Khiếu nại nếu thông tin bị sử dụng sai mục đích.</li>
+    </ul>
+
+    <h3>7. Cam kết</h3>
+    <p>
+        Chúng tôi cam kết không mua bán, trao đổi thông tin khách hàng dưới bất kỳ hình thức nào. 
+        Mọi hành vi vi phạm bảo mật sẽ được xử lý theo quy định của pháp luật.
+    </p>
+</div>
+
+    <!-- TAB 6 -->
+<div id="tab6" class="tab-content">
+    <h2>HƯỚNG DẪN MUA HÀNG</h2>
+
+    <p>
+        Để giúp Quý khách có trải nghiệm mua sắm dễ dàng và nhanh chóng, 
+        chúng tôi cung cấp các bước hướng dẫn chi tiết như sau:
+    </p>
+
+    <h3>1. Tìm kiếm sản phẩm</h3>
+    <ul>
+        <li>Sử dụng thanh tìm kiếm để nhập tên sản phẩm cần tìm.</li>
+        <li>Hoặc chọn sản phẩm theo danh mục hiển thị trên website.</li>
+    </ul>
+
+    <h3>2. Lựa chọn sản phẩm</h3>
+    <ul>
+        <li>Nhấn vào sản phẩm để xem thông tin chi tiết.</li>
+        <li>Chọn số lượng và các tùy chọn (nếu có).</li>
+        <li>Nhấn nút <b>“Thêm vào giỏ hàng”</b>.</li>
+    </ul>
+
+    <h3>3. Kiểm tra giỏ hàng</h3>
+    <ul>
+        <li>Nhấn vào biểu tượng giỏ hàng để xem lại sản phẩm đã chọn.</li>
+        <li>Có thể chỉnh sửa số lượng hoặc xóa sản phẩm nếu cần.</li>
+    </ul>
+
+    <h3>4. Tiến hành đặt hàng</h3>
+    <ul>
+        <li>Nhấn <b>“Thanh toán”</b> để bắt đầu đặt hàng.</li>
+        <li>Nhập đầy đủ thông tin nhận hàng: họ tên, số điện thoại, địa chỉ.</li>
+    </ul>
+
+    <h3>5. Chọn phương thức thanh toán</h3>
+    <ul>
+        <li>Thanh toán khi nhận hàng (COD).</li>
+        <li>Thanh toán chuyển khoản hoặc ví điện tử (nếu có).</li>
+    </ul>
+
+    <h3>6. Xác nhận đơn hàng</h3>
+    <p>
+        Sau khi hoàn tất, hệ thống sẽ ghi nhận đơn hàng và gửi thông tin xác nhận. 
+        Nhân viên sẽ liên hệ với Quý khách để xác nhận trước khi giao hàng.
+    </p>
+
+    <h3>7. Nhận hàng</h3>
+    <ul>
+        <li>Kiểm tra sản phẩm khi nhận.</li>
+        <li>Thanh toán (nếu chọn COD).</li>
+        <li>Liên hệ ngay nếu có vấn đề phát sinh.</li>
+    </ul>
+
+</div>
+
+    <!-- TAB 7 -->
+<div id="tab7" class="tab-content">
+    <h2>XUẤT HÓA ĐƠN</h2>
+
+    <p>
+        Chúng tôi hỗ trợ xuất hóa đơn giá trị gia tăng (VAT) cho các đơn hàng theo yêu cầu của Quý khách.
+        Vui lòng tham khảo các quy định dưới đây để đảm bảo quá trình xuất hóa đơn được nhanh chóng và chính xác.
+    </p>
+
+    <h3>1. Điều kiện xuất hóa đơn</h3>
+    <ul>
+        <li>Áp dụng cho tất cả các đơn hàng mua tại website.</li>
+        <li>Thông tin xuất hóa đơn phải được cung cấp đầy đủ và chính xác ngay khi đặt hàng.</li>
+        <li>Mỗi đơn hàng chỉ được xuất <b>01 hóa đơn</b>.</li>
+    </ul>
+
+    <h3>2. Thông tin cần cung cấp</h3>
+    <ul>
+        <li>Tên công ty / cá nhân.</li>
+        <li>Mã số thuế (đối với doanh nghiệp).</li>
+        <li>Địa chỉ xuất hóa đơn.</li>
+        <li>Email nhận hóa đơn điện tử.</li>
+    </ul>
+
+    <h3>3. Thời gian xuất hóa đơn</h3>
+    <p>
+        Hóa đơn sẽ được phát hành trong vòng <b>1 – 3 ngày làm việc</b> kể từ khi đơn hàng được giao thành công.
+    </p>
+
+    <h3>4. Hình thức nhận hóa đơn</h3>
+    <ul>
+        <li>Hóa đơn điện tử sẽ được gửi qua email Quý khách đã đăng ký.</li>
+        <li>Vui lòng kiểm tra hộp thư (bao gồm Spam/Junk).</li>
+    </ul>
+
+    <h3>5. Lưu ý quan trọng</h3>
+    <ul>
+        <li>Không hỗ trợ xuất hóa đơn sau khi đơn hàng đã hoàn tất nếu không có yêu cầu trước đó.</li>
+        <li>Thông tin hóa đơn không thể thay đổi sau khi đã phát hành.</li>
+        <li>Chúng tôi không chịu trách nhiệm nếu Quý khách cung cấp sai thông tin.</li>
+    </ul>
+
+    <h3>6. Hỗ trợ</h3>
+    <p>
+        Nếu cần hỗ trợ về hóa đơn, Quý khách vui lòng liên hệ bộ phận chăm sóc khách hàng để được xử lý nhanh nhất.
+    </p>
+
+</div>
+
+ <!-- TAB 8 -->
+    <div id="tab8" class="tab-content">
+        <h2>ĐIỀU KHOẢN SỬ DỤNG</h2>
+
+        <p>
+            Khi truy cập và sử dụng website của chúng tôi, Quý khách đồng ý tuân thủ các điều khoản sử dụng dưới đây.
+            Vui lòng đọc kỹ trước khi tiếp tục sử dụng dịch vụ.
+        </p>
+
+        <h3>1. Chấp nhận điều khoản</h3>
+        <p>
+            Việc sử dụng website đồng nghĩa với việc Quý khách đã đồng ý với các điều khoản và quy định hiện hành.
+            Nếu không đồng ý, vui lòng ngừng sử dụng dịch vụ.
+        </p>
+
+        <h3>2. Quyền và trách nhiệm của người dùng</h3>
+        <ul>
+            <li>Cung cấp thông chính xác khi đăng ký và mua hàng.</li>
+            <li>Không sử dụng website vào mục đích vi phạm pháp luật.</li>
+            <li>Không can thiệp, phá hoại hoặc làm gián đoạn hệ thống.</li>
+        </ul>
+
+        <h3>3. Quyền của chúng tôi</h3>
+        <ul>
+            <li>Thay đổi nội dung website mà không cần thông báo trước.</li>
+            <li>Từ chối phục vụ hoặc hủy đơn hàng nếu phát hiện vi phạm.</li>
+            <li>Tạm ngưng tài khoản khi có dấu hiệu bất thường.</li>
+        </ul>
+
+        <h3>4. Nội dung và bản quyền</h3>
+        <p>
+            Toàn bộ nội dung trên website bao gồm hình ảnh, văn bản, logo và thiết kế
+            đều thuộc quyền sở hữu của chúng tôi hoặc đối tác liên quan.
+            Nghiêm cấm sao chép, sử dụng lại khi chưa được cho phép.
+        </p>
+
+        <h3>5. Giới hạn trách nhiệm</h3>
+        <p>
+            Chúng tôi không chịu trách nhiệm đối với các thiệt hại phát sinh do lỗi người dùng
+            hoặc các sự cố ngoài tầm kiểm soát như lỗi hệ thống, đường truyền, thiên tai.
+        </p>
+
+        <h3>6. Liên kết bên thứ ba</h3>
+        <p>
+            Website có thể chứa liên kết đến các trang khác. Chúng tôi không chịu trách nhiệm
+            về nội dung hoặc chính sách của các website bên ngoài.
+        </p>
+
+        <h3>7. Thay đổi điều khoản</h3>
+        <p>
+            Các điều khoản có thể được cập nhật theo thời gian.
+            Quý khách nên thường xuyên kiểm tra để nắm thông tin mới nhất.
+        </p>
+
+        <h3>8. Luật áp dụng</h3>
+        <p>
+            Các điều khoản này được điều chỉnh theo quy định của pháp luật hiện hành.
+            Mọi tranh chấp sẽ được giải quyết tại cơ quan có thẩm quyền.
+        </p>
+
+    </div>
+
+</div> <!-- Đóng class="policy-content-area" -->
+</div> <!-- Đóng class="policy-content-area" bị dư -->
+</div> <!-- Đóng class="policy-wrapper" -->
+
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Cột 1: Logo + thông tin -->
+        <div class="footer-col company">
+            <img src="../images/LOGO.png" alt="Guardian" class="logo">
+            <p><b>CÔNG TY TNHH MTV THƯƠNG MẠI <BR> VÀ ĐẦU TƯ LIÊN Á CHÂU</b></p>
+            <p>Giấy chứng nhận đăng ký doanh <BR> nghiệp số 0310618188</p>
+            <p>Tự sở chính: L2-VP-01, 346 Bến Vân Đồn, TP.HCM</p>
+            <p>Hotline: <span class="hotline">19004449</span></p>
+        </div>
+
+        <!-- Cột 2: mạng xã hội + app -->
+        <div class="footer-col social">
+            <h3>Theo dõi chúng tôi</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/guardianvn" target="_blank"><img src="../images/FB.JPG"></a>
+                <a href="https://www.instagram.com/guardianvn" target="_blank"><img src="../images/IG.JPG"></a>
+                <a href="https://www.youtube.com/@guardianvietnam" target="_blank"><img src="../images/YT.JPG"></a>
+                <a href="https://www.tiktok.com/@guardianvietnam" target="_blank"><img src="../images/TT.jpg"></a>
+            </div>
+            <h3>Tải App Ngay</h3>
+            <img src="../images/QR.JPG" class="qr">
+            <div class="app">
+                <a href="#"><img src="../images/ggplay_logo.png"></a>
+                <a href="#"><img src="../images/appstore.png"></a>
+            </div>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="footer-col">
+            <h3>Về chúng tôi</h3>
+            <ul>
+                <li><a href="Gioithieu.html">Giới thiệu</a></li>
+                <li><a href="Lienhe.html">Liên hệ</a></li>
+                <li><a href="Lienhe.html">Địa chỉ cửa hàng</a></li>
+                <li><a href="../html/Thanhdieuhuong.html">Trang sitemap</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột 4 -->
+        <div class="footer-col">
+            <h3>Chính sách</h3>
+            <ul>
+                <li><a href="Chinhsach.html#tab1">Chính sách và quy định chung</a></li>
+                <li><a href="Chinhsach.html#tab2">Quy định thanh toán</a></li>
+                <li><a href="Chinhsach.html#tab3">Chính sách vận chuyển</a></li>
+                <li><a href="Chinhsach.html#tab4">Chính sách đổi trả</a></li>
+                <li><a href="Chinhsach.html#tab5">Bảo mật thông tin</a></li>
+                <li><a href="Chinhsach.html#tab6">Hướng dẫn mua hàng</a></li>
+                <li><a href="Chinhsach.html#tab7">Xuất hóa đơn</a></li>
+                <li><a href="Chinhsach.html#tab8">Điều khoản sử dụng</a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+.footer {
+    background: #f3f3f3;
+    padding: 40px 0;
+    font-family: Arial;
+}
+
+.footer-container {
+    width: 1200px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-col {
+    width: 25%;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin: 8px 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-col ul li a:hover {
+    color: orange;
+}
+
+.logo {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+}
+
+.qr {
+    width: 100px;
+    margin: 10px 0;
+}
+
+.app img {
+    width: 120px;
+    margin: 5px 0;
+}
+
+.hotline {
+    color: orange;
+    font-weight: bold;
+}
+</style>
+
+<script>
+    function switchTab(tabId, element) {
+        // Bước 1: Ẩn tất cả các nội dung
+        const allTabs = document.querySelectorAll('.tab-content');
+        allTabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        // Bước 2: Bỏ highlight ở tất cả các menu
+        const allMenuItems = document.querySelectorAll('.policy-menu li');
+        allMenuItems.forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Bước 3: Hiện nội dung được chọn và highlight menu tương ứng
+        document.getElementById(tabId).classList.add('active');
+        element.classList.add('active');
+    }
+</script>
+    <div id="toast"></div>
+    <script src="../js/filter-products.js"></script>
+    <script src="../js/qutri.js"></script>
+    <script src="../js/checkout.js"></script>
+    <script src="../js/toast-message.js"></script>
+    <script src="../js/account-management.js"></script>
+    <script src="../js/product-list.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+</body>
+</html>

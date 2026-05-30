@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang giới thiệu </title>  
+  <script src="../js/initialization.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/topbar.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/search.css"/>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/product-detail.css"/>  
+  <link rel="stylesheet" href="../css/home-responsive.css">
+  <link rel="stylesheet" href="../css/header-responsive.css">
+  <link rel="stylesheet" href="../css/products-responsive.css">
+  <link rel="stylesheet" href="../css/footer-responsive.css">
+  <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/account-management.css"/>
+  <link rel="stylesheet" href="../css/product-list.css"/>
+  <script src="../js/notifition.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ 
+    
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-bar-content">
+        IP25K - GIẢM NGAY 25K CHO ĐƠN HÀNG 99K 
+        NHẬP MÃ T04FREESHIP20K - GIẢM NGAY 20K
+    </div>
+</div>
+<div>
+  <div class="header">
+    <!-- MENU TRÊN -->
+    <!-- MAIN -->
+    <div class="header-main">
+        <!-- HAMBURGER MENU (Mobile) -->
+        <button class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- LOGO -->
+        <div class="logo">
+    <img src="../images/LOGO3.png" alt="logo">
+  </div>
+  <div class="search-box position-relative">
+    <i class="fa fa-search"></i>
+    <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm..." autocomplete="off">
+    <div id="searchDropdown" class="search-dropdown">
+        <div id="boxSP">
+<h4 style="letter-spacing: 1px; font-weight: 700; font-family: Arial, sans-serif;">TỪ KHÓA GỢI Ý</h4>
+<ul id="listTuKhoa" class="suggested-keywords" style="margin-bottom: 20px;"></ul>
+
+<h4 style="letter-spacing: 1px; font-weight: 700; font-family: Arial, sans-serif;">SẢN PHẨM LIÊN QUAN</h4>
+<div id="listSanPham" class="search-product-list"></div>
+        </div>
+    </div>
+  </div>
+  <script src="../js/search.js"></script>
+  <div>
+    <div class="header-middle-right">
+      <ul class="header-middle-right-list">
+            <li class="header-middle-right-item dropdown">
+              <i class="fa-light fa-user"></i>
+              <div class="auth-container">
+                <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+              </div>
+              <ul class="header-middle-right-menu">
+                <li><a id="login" href="javascript:;"><i class="fa-light fa-right-to-bracket"></i> Đăng nhập</a></li>
+                <li><a id="signup" href="javascript:;"><i class="fa-light fa-user-plus"></i> Đăng ký</a></li>
+              </ul>
+            </li>
+            <li class="header-middle-right-item" onclick="openCart()">
+              <div class="cart-icon-menu">
+                <i class="fa-light fa-basket-shopping"></i>
+                <span class="count-product-cart">0</span>
+              </div>
+              <span>Giỏ hàng</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal signup-login">
+        <div class="modal-container">
+          <button class="form-close" onclick="closeModal()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+          <div class="forms mdl-cnt">
+            <div class="form-content sign-up">
+        <h3 class="form-title">Đăng ký tài khoản</h3>
+        <p class="form-description">Đăng ký thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi </p>
+        <form action="" class="signup-form">
+          <div class="form-group">
+            <label for="fullname" class="form-label">Tên đầy đủ</label>
+            <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Sinh" class="form-control">
+            <span class="form-message-name form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input id="phone" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+            <span class="form-message-phone form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message-password form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+            <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+            <span class="form-message-password-confi form-message"></span>
+          </div>
+          <div class="form-group">
+            <input class="checkbox" name="checkbox" required="" type="checkbox" id="checkbox-signup">
+            <label for="checkbox-signup" class="form-checkbox"><a href="#"title="Tôi đồng ý với chính sách trang web" target="_blank">Tôi đồng ý với chính sách trang web</a></label>
+            <p class="form-message-checkbox form-message"></p>
+          </div>
+          <button class="form-submit" id="signup-button">Đăng ký</button>
+        </form>
+        <p class="change-login">Bạn đã có tài khoản ? <a href="javascript:;" class="login-link">Đăng nhập ngay</a></p>
+      </div>
+      <div class="form-content login">
+        <h3 class="form-title">Đăng nhập tài khoản</h3>
+        <p class="form-description">Đăng nhập thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúngtôi</p>
+        <form action="" class="login-form">
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input id="phone-login" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+            <span class="form-message phonelog"></span>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password-login" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message-check-login form-message"></span>
+          </div>
+          <button class="form-submit" id="login-button">Đăng nhập</button>
+        </form>
+        <p class="change-login">Bạn chưa có tài khoản ? <a href="javascript:;" class="signup-link">Đăng kí ngay</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-cart">
+  <div class="cart-container">
+    <div class="cart-header">
+        <h3 class="cart-header-title"><i class="fa-light fa-basket-shopping"></i> Giỏ hàng của bạn</h3>
+        <button class="cart-close" onclick="closeCart()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body">
+        <div class="gio-hang-trong">
+            <i class="fa-thin fa-cart-xmark"></i>
+            <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
+        </div>
+        <ul class="cart-list">
+        </ul>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total-price">
+            <p class="text-tt">Tổng tiền:</p>
+            <p class="text-price">0đ</p>
+        </div>
+        <div class="cart-footer-payment">
+            <button class="them-mon"><i class="fa-regular fa-plus"></i> Thêm món</button>
+            <button class="thanh-toan disabled">Thanh toán</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+  <header class="header-nav" style="position: relative; z-index: 1000 !important;">
+    <div class="nav-container">
+        <div class="nav-item-wrap">
+            <a href="Trangchu.html" class="nav-item"><i class="fa-solid fa-house"></i> TRANG CHỦ</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="khuyenmai.html?promo=sale-50" class="nav-item">🔥 KHUYẾN MÃI HOT 🔥</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Sanpham.html" class="nav-item">SẢN PHẨM <i class="fa-solid fa-angle-down" style="font-size: 11px;"></i></a>
+            <div class="simple-dropdown">
+                <ul>
+                        <li><a href="Sanpham.html?category=Nước%20hoa">Nước hoa</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20cơ%20thể">Chăm sóc cơ thể</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20tóc">Chăm sóc tóc</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20da%20mặt">Chăm sóc da mặt</a></li>
+                         <li><a href="Sanpham.html?category=Trang%20điểm">Trang điểm</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Gioithieu.html" class="nav-item">GIỚI THIỆU</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Lienhe.html" class="nav-item">LIÊN HỆ</a>
+        </div>
+        </header>
+</div>
+<!-- MOBILE SIDEBAR MENU -->
+<div class="mobile-sidebar-overlay"></div>
+<div class="mobile-sidebar">
+    <div class="mobile-search-box">
+        <input type="text" id="mobileSearchInput" placeholder="TÌm sản phẩm..." autocomplete="off">
+    </div>
+    
+    <ul class="mobile-nav-menu">
+        <li class="mobile-nav-item">
+            <a href="Trangchu.html"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="khuyenmai.html?promo=sale-50"><i class="fa-solid fa-fire"></i> Khuyến Mãi Hot</a>
+        </li>
+        <li class="mobile-nav-item has-submenu">
+            <a href="javascript:;"><i class="fa-solid fa-bag-shopping"></i> Sản Phẩm</a>
+            <ul class="mobile-submenu">
+                <li><a href="Sanpham.html?category=Nước%20hoa">Nước Hoa</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20cơ%20thể">Chăm Sóc Cơ Thể</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20tóc">Chăm Sóc Tóc</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20da%20mặt">Chăm Sóc Da Mặt</a></li>
+                <li><a href="Sanpham.html?category=Trang%20điểm">Trang Điểm</a></li>
+            </ul>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="Gioithieu.html"><i class="fa-solid fa-circle-info"></i> Giới Thiệu</a>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="Lienhe.html"><i class="fa-solid fa-phone"></i> Liên Hệ</a>
+        </li>
+    </ul>
+</div></body>
+</html>
+
+<!--DANH MỤC-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ================= CÀI ĐẶT CHUNG ================= */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
+        :root {
+            --orange-main: #ff6600; /* Màu cam chuẩn */
+            --bg-sidebar: #f7f7f7;
+            --text-dark: #333;
+            --text-light: #555;
+            --border-line: #eaeaea;
+        }
+
+        /* ================= THANH MENU CAM CHÍNH ================= */
+        .header-nav {
+            background-color: var(--orange-main);
+            height: 48px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-container {
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Dàn đều các mục */
+            position: relative; /* Chuẩn để thả Mega Menu */
+        }
+
+        /* Gói từng nút. Nút nào có Mega Menu thì position: static. Nút menu nhỏ thì position: relative */
+        .nav-item-wrap { height: 100%; display: flex; align-items: center; cursor: pointer; }
+        .nav-item-wrap.has-mega { position: static; }
+        .nav-item-wrap.has-simple { position: relative; }
+
+        .nav-item {
+            color: #fff; text-decoration: none; font-weight: bold; font-size: 14px;
+            padding: 0 15px; height: 100%; display: flex; align-items: center; text-transform: uppercase;
+            transition: 0.2s; gap: 6px;
+        }
+        .nav-item:hover { color: #ffe0b2; }
+        .nav-item i { font-size: 15px; }
+
+        /* ================= 1. BẢNG MEGA MENU (DANH MỤC) ================= */
+        .mega-menu {
+            position: absolute; top: 48px; left: 0; width: 100%;
+            background-color: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex; min-height: 450px; visibility: hidden; opacity: 0; transition: 0.2s; z-index: 1000;
+            border: 1px solid var(--border-line); border-top: none;
+        }
+        .nav-item-wrap.has-mega:hover .mega-menu { visibility: visible; opacity: 1; }
+
+        /* Cột Sidebar Trái Mega Menu */
+        .mega-sidebar { width: 240px; background-color: var(--bg-sidebar); border-right: 1px solid var(--border-line); }
+        .mega-sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .mega-tab { padding: 12px 20px; font-size: 14px; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-line); }
+        .mega-tab i { font-size: 12px; color: transparent; }
+        .mega-tab:hover, .mega-tab.active { background-color: #fff; color: var(--orange-main); font-weight: bold; }
+        .mega-tab:hover i, .mega-tab.active i { color: var(--orange-main); }
+
+        /* Cột Phải Mega Menu */
+        .mega-content { flex: 1; padding: 20px 30px; background-color: #fff; }
+        .mega-pane { display: none; }
+        .mega-pane.active { display: block; animation: fadeIn 0.3s; }
+        .mega-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; align-items: start; }
+        .menu-group { margin-bottom: 25px; }
+        .menu-group h4 { font-size: 13px; font-weight: bold; color: #000; text-transform: uppercase; margin: 0 0 12px 0; }
+        .menu-group ul { list-style: none; padding: 0; margin: 0; }
+        .menu-group li { margin-bottom: 10px; }
+        .menu-group a { text-decoration: none; color: var(--text-light); font-size: 13px; }
+        .menu-group a:hover { color: var(--orange-main); }
+
+        /* ================= 2. MENU THẢ XUỐNG NHỎ (CÁC MỤC CÒN LẠI) ================= */
+        .simple-dropdown {
+            position: absolute; top: 48px; left: 0; min-width: 200px;
+            background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            visibility: hidden; opacity: 0; transition: 0.2s; z-index: 999;
+            border: 1px solid var(--border-line); border-top: none;
+        }
+        .nav-item-wrap.has-simple:hover .simple-dropdown { visibility: visible; opacity: 1; }
+        .simple-dropdown ul { list-style: none; padding: 0; margin: 0; }
+        .simple-dropdown li { border-bottom: 1px solid var(--border-line); }
+        .simple-dropdown li:last-child { border-bottom: none; }
+        .simple-dropdown a { display: block; padding: 12px 15px; color: var(--text-dark); text-decoration: none; font-size: 13px; font-weight: normal; }
+        .simple-dropdown a:hover { color: var(--orange-main); background-color: #fff9f5; padding-left: 20px; transition: 0.2s; }
+
+        /* Form Tra Cứu Đơn Hàng */
+        .order-form { padding: 15px; min-width: 250px; right: 0; left: auto; }
+        .order-form input { width: 100%; padding: 8px 10px; margin-bottom: 10px; border: 1px solid #ccc; box-sizing: border-box; outline: none; font-size: 13px;}
+        .order-form input:focus { border-color: var(--orange-main); }
+        .order-form button { width: 100%; padding: 10px; background-color: var(--orange-main); color: #fff; border: none; font-weight: bold; cursor: pointer; }
+        .order-form button:hover { background-color: #e65c00; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
+        :root {
+            --orange-main: #ff6600; 
+            --text-dark: #333;
+            --border-line: #eaeaea;
+        }
+
+        .header-nav {
+            background-color: var(--orange-main);
+            height: 48px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-container {
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            position: relative;
+        }
+
+        .nav-item-wrap { height: 100%; display: flex; align-items: center; cursor: pointer; position: relative; }
+
+        .nav-item {
+            color: #fff; text-decoration: none; font-weight: bold; font-size: 14px;
+            padding: 0 15px; height: 100%; display: flex; align-items: center; text-transform: uppercase;
+            transition: 0.2s; gap: 6px;
+        }
+        .nav-item:hover { color: #ffe0b2; }
+        .nav-item i { font-size: 15px; }
+
+
+        .simple-dropdown {
+            position: absolute; top: 48px; left: 0; min-width: 220px;
+            background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            visibility: hidden; opacity: 0; transition: 0.2s; z-index: 999;
+            border: 1px solid var(--border-line); border-top: none;
+        }
+        
+        .nav-item-wrap:hover .simple-dropdown { visibility: visible; opacity: 1; }
+        
+        .simple-dropdown ul { list-style: none; padding: 0; margin: 0; }
+        .simple-dropdown li { border-bottom: 1px solid var(--border-line); }
+        .simple-dropdown li:last-child { border-bottom: none; }
+        .simple-dropdown a { display: block; padding: 12px 15px; color: var(--text-dark); text-decoration: none; font-size: 13px; font-weight: normal; }
+        .simple-dropdown a:hover { color: var(--orange-main); background-color: #fff9f5; padding-left: 20px; transition: 0.2s; }
+          .header-nav {
+    position: relative;
+    z-index: 9999;
+}
+        .modal-cart {
+        z-index: 99999 !important;
+}
+    </style>
+</head>
+<body>
+
+  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+
+        :root {
+            --primary: #ff6600; 
+            --primary-light: #ffa64d;
+            --primary-fade: #fff2e6; 
+            --text-dark: #333333; 
+            --bg-white: #ffffff; 
+        }
+
+        body { font-family: 'Nunito', sans-serif; margin: 0; padding: 0; background: var(--bg-white); color: var(--text-dark); overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; margin: 0; }
+
+
+        .hero-section {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+
+            background: url('https://loop.com.vn/storage/guardian-web-banner.jpg') center/cover no-repeat;
+        }
+
+        .hero-overlay { 
+            position: absolute; 
+            inset: 0; 
+            background: rgba(0, 0, 0, 0.2); 
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 20px; animation: fadeInUp 1s ease; }
+        
+        .hero-content h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero-content p { font-size: 1.2rem; font-weight: 600; line-height: 1.6; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
+
+        .about-section {
+            position: relative;
+            color: white;
+            padding: 80px 20px;
+            background: url('https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&q=80') center/cover no-repeat;
+            text-align: center;
+        }
+        .about-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255, 102, 0, 0.9), rgba(255, 140, 26, 0.8)); z-index: 1; }
+        .about-content { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; animation: fadeInUp 1s ease; }
+        
+        .about-content h2 { font-size: 2.5rem; color: #fff; margin-bottom: 30px; position: relative; display: inline-block; padding-bottom: 15px; text-shadow: 1px 1px 4px rgba(0,0,0,0.1); }
+        .about-content h2::after { content: ''; width: 60px; height: 4px; background: #fff; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); border-radius: 2px; }
+        
+        .story-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: justify;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .story-box h3 { color: #ffe0b2; font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .story-box p { font-size: 1.05rem; color: #fff; line-height: 1.8; margin: 0; }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .mv-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+        .mv-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.15); }
+        .mv-card h3 { color: #ffe0b2; font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .mv-card p { font-size: 1.05rem; color: #fff; line-height: 1.7; margin: 0; }
+        /* ================================================================ */
+
+        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .feature-item { display: flex; flex-direction: column; align-items: center; text-align: center; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.3); transition: 0.3s; }
+        .feature-item:hover { background: rgba(255,255,255,0.2); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .feature-icon { color: var(--primary); background: #fff; font-size: 1.8rem; margin-bottom: 20px; border-radius: 50%; width: 70px; height: 70px; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .feature-info h4 { font-size: 1.2rem; margin-bottom: 5px; color: #fff; }
+        .feature-info p { margin: 0; font-size: 0.95rem; color: #fff; line-height: 1.6; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--text-dark); display: inline-block; position: relative; }
+        .section-title h2 span { color: var(--primary); }
+
+        :root {
+            --light-orange: #fff4ec;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .team-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px 20px;
+            width: 260px; 
+            flex: 0 0 auto; 
+            box-sizing: border-box; 
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.08);
+            border: 1px solid rgba(255, 102, 0, 0.1);
+            border-top: 5px solid var(--primary);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255, 102, 0, 0.15);
+        }
+
+        .avatar-container {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--primary), #ffae42);
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff; 
+        }
+
+        .member-name {
+            font-size: 19px;
+            color: var(--text-dark);
+            margin: 0 0 8px 0;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .member-role {
+            font-size: 13px;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin: 0 0 25px 0;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .member-mssv {
+            background-color: var(--light-orange);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255, 102, 0, 0.3);
+        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 992px) { .feature-grid { grid-template-columns: 1fr; } .team-card { width: calc(50% - 15px); } .mv-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .team-card { width: 100%; } .hero-content h1 { font-size: 2.5rem; } .story-box { padding: 25px 20px; } }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Hành Trình Tôn Vinh Sắc Đẹp</h1>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-overlay"></div>
+        <div class="about-content">
+            <h2> VỀ CHÚNG TÔI</h2>
+            
+            <div class="story-box">
+                <h3><i class="fa-solid fa-book-open-reader"></i> Giá Trị Cốt Lõi</h3>
+                <p>Bắt nguồn từ khát khao đánh thức vẻ đẹp tiềm ẩn của mỗi người, hệ thống của chúng tôi ra đời không chỉ để phân phối mỹ phẩm, mà còn mong muốn trở thành người bạn đồng hành tin cậy trên hành trình chăm sóc bản thân của bạn. Chúng tôi tin rằng vẻ đẹp thực sự bắt nguồn từ sự tự tin, thấu hiểu làn da và biết cách yêu thương chính mình. Từng sản phẩm trên kệ hàng đều được đội ngũ chuyên gia chọn lọc kỹ lưỡng bằng cả sự tận tâm và chuyên môn khắt khe nhất.</p>
+            </div>
+
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <h3><i class="fa-solid fa-bullseye"></i> Sứ Mệnh</h3>
+                    <p>Mang đến những giải pháp chăm sóc sắc đẹp toàn diện, an toàn và hiệu quả. Chúng tôi cam kết cung cấp 100% sản phẩm chính hãng, đi kèm dịch vụ tư vấn chuyên sâu, giúp mỗi khách hàng dễ dàng tìm ra "chân ái" cho làn da và tỏa sáng theo cách riêng biệt của mình.</p>
+                </div>
+                <div class="mv-card">
+                    <h3><i class="fa-solid fa-eye"></i> Tầm Nhìn</h3>
+                    <p>Khát vọng trở thành nền tảng mua sắm mỹ phẩm trực tuyến hàng đầu và được yêu thích nhất tại Việt Nam. Chúng tôi hướng tới việc xây dựng một cộng đồng làm đẹp văn minh, nơi mọi tín đồ có thể an tâm gửi gắm niềm tin và không ngừng nâng tầm nhan sắc.</p>
+                </div>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="feature-info">
+                        <h4>100% Chính Hãng</h4>
+                        <p>Sản phẩm nhập khẩu trực tiếp từ các thương hiệu hàng đầu thế giới.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="feature-info">
+                        <h4>Giao Hàng Siêu Tốc</h4>
+                        <p>Freeship toàn quốc, đóng gói cẩn thận, giao đến tận tay khách hàng.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="feature-info">
+                        <h4>Hỗ Trợ Tận Tâm 24/7</h4>
+                        <p>Đội ngũ chuyên viên sẵn sàng tư vấn lộ trình chăm sóc da chuẩn y khoa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-title">
+            <h2>Đội Ngũ <span>Phát Triển</span></h2>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="avatar-container">
+                    <img src="../images/Thu1.jpg" alt="Nguyễn Anh Thư" class="avatar">
+                </div>
+                <h3 class="member-name">Nguyễn Anh Thư</h3>
+                <p class="member-role">NHÓM TRƯỞNG</p>
+                <div class="member-mssv">
+                    <i class="fa-solid fa-id-badge"></i> 24669611
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar-container">
+                    <img src="../images/Van.jpg" alt="Ao Thanh Vân" class="avatar">
+                </div>
+                <h3 class="member-name">Ao Thanh Vân</h3>
+                <p class="member-role">THÀNH VIÊN</p>
+                <div class="member-mssv">
+                    <i class="fa-solid fa-id-badge"></i> 24634291
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar-container">
+                    <img src="../images/Tien.jpg" alt="Huỳnh Nguyễn Mỹ Tiên" class="avatar">
+                </div>
+                <h3 class="member-name">Huỳnh Nguyễn Mỹ Tiên</h3>
+                <p class="member-role">THÀNH VIÊN</p>
+                <div class="member-mssv">
+                    <i class="fa-solid fa-id-badge"></i> 24657661
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar-container">
+                    <img src="../images/Tracy.jpg" alt="Đinh Thị Thu Trang" class="avatar">
+                </div>
+                <h3 class="member-name">Đinh Thị Thu Trang</h3>
+                <p class="member-role">THÀNH VIÊN</p>
+                <div class="member-mssv">
+                    <i class="fa-solid fa-id-badge"></i> 24664081
+                </div>
+            </div>
+        </div>
+    </section>
+   <!--FOOTER-->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Cột 1: Logo + thông tin -->
+        <div class="footer-col company">
+            <img src="../images/LOGO.png" alt="Guardian" class="logo">
+
+            <p><b>CÔNG TY TNHH MTV THƯƠNG MẠI <BR> VÀ ĐẦU TƯ LIÊN Á CHÂU</b></p>
+            <p>Giấy chứng nhận đăng ký doanh <BR> nghiệp số 0310618188</p>
+            <p>Tự sở chính: L2-VP-01, 346 Bến Vân Đồn, TP.HCM</p>
+            <p>Hotline: <span class="hotline">19004449</span></p>
+
+            
+        </div>
+
+        <!-- Cột 2: mạng xã hội + app -->
+        <div class="footer-col social">
+            <h3>Theo dõi chúng tôi</h3>
+            <div class="social-icons">
+
+    <div class="social-icons">
+    <a href="https://www.facebook.com/guardianvn" target="_blank">
+        <img src="../images/FB.JPG">
+    </a>
+
+    <a href="https://www.instagram.com/guardianvn" target="_blank">
+        <img src="../images/IG.JPG">
+    </a>
+
+    <a href="https://www.youtube.com/@guardianvietnam" target="_blank">
+        <img src="../images/YT.JPG">
+    </a>
+
+    <a href="https://www.tiktok.com/@guardianvietnam" target="_blank">
+        <img src="../images/TT.jpg">
+    </a>
+</div>
+
+</div>
+
+            <h3>Tải App Ngay</h3>
+            <img src="../images/QR.JPG" class="qr">
+
+            <div class="app">
+                <a href="#"><img src="../images/ggplay_logo.png"></a>
+                <a href="#"><img src="../images/appstore.png"></a>
+            </div>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="footer-col">
+            <h3>Về chúng tôi</h3>
+            <ul>
+                <li><a href="Gioithieu.htm">Giới thiệu</a></li>
+                <li><a href="Lienhe.html">Liên hệ</a></li>
+                <li><a href="Lienhe.html">Địa chỉ cửa hàng</a></li>
+                <li><a href="../html/Thanhdieuhuong.html">Trang sitemap</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột 4 -->
+        <div class="footer-col">
+            <h3>Chính sách</h3>
+            <ul>
+                <li><a href="Chinhsach.html#tab1">Chính sách và quy định chung</a></li>
+                <li><a href="Chinhsach.html#tab2">Quy định thanh toán</a></li>
+                <li><a href="Chinhsach.html#tab3">Chính sách vận chuyển</a></li>
+                <li><a href="Chinhsach.html#tab4">Chính sách đổi trả</a></li>
+                <li><a href="Chinhsach.html#tab5">Bảo mật thông tin</a></li>
+                <li><a href="Chinhsach.html#tab6">Hướng dẫn mua hàng</a></li>
+                <li><a href="Chinhsach.html#tab7">Xuất hóa đơn</a></li>
+                <li><a href="Chinhsach.html#tab8">Điều khoản sử dụng</a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+ <div class="back-to-top">
+        <a href="#"><i class="fa-regular fa-arrow-up"></i></a>
+    </div>
+    <div id="toast"></div>
+    <script src="../js/initialization.js"></script>
+    <script src="../js/filter-products.js"></script>
+    <script src="../js/qutri.js"></script>
+    <script src="../js/checkout.js"></script>
+    <script src="../js/toast-message.js"></script>
+    <script src="../js/account-management.js"></script>
+    <script src="../js/product-list.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+</body>
+</html>
+

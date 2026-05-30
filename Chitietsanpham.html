@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chi tiết sản phẩm</title>  
+  <script src="../js/initialization.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/topbar.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/search.css"/>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/product-detail.css"/>  
+  <link rel="stylesheet" href="../css/home-responsive.css">
+  <link rel="stylesheet" href="../css/header-responsive.css">
+  <link rel="stylesheet" href="../css/products-responsive.css">
+  <link rel="stylesheet" href="../css/footer-responsive.css">
+  <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/account-management.css"/>
+  <link rel="stylesheet" href="../css/product-list.css"/>
+  <script src="../js/notifition.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ 
+ 
+    
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-bar-content">
+        IP25K - GIẢM NGAY 25K CHO ĐƠN HÀNG 99K 
+        NHẬP MÃ T04FREESHIP20K - GIẢM NGAY 20K
+    </div>
+</div>
+<div>
+  <div class="header">
+    <!-- MENU TRÊN -->
+    <!-- MAIN -->
+    <div class="header-main">
+        <!-- HAMBURGER MENU (Mobile) -->
+        <button class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- LOGO -->
+        <div class="logo">
+    <img src="../images/LOGO3.png" alt="logo">
+  </div>
+  <div class="search-box position-relative">
+    <i class="fa fa-search"></i>
+    <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm..." autocomplete="off">
+    <div id="searchDropdown" class="search-dropdown">
+        <div id="boxSP">
+<h4 style="letter-spacing: 1px; font-weight: 700; font-family: Arial, sans-serif;">TỪ KHÓA GỢI Ý</h4>
+<ul id="listTuKhoa" class="suggested-keywords" style="margin-bottom: 20px;"></ul>
+
+<h4 style="letter-spacing: 1px; font-weight: 700; font-family: Arial, sans-serif;">SẢN PHẨM LIÊN QUAN</h4>
+<div id="listSanPham" class="search-product-list"></div>
+        </div>
+    </div>
+  </div>
+  <script src="../js/search.js"></script>
+  <div>
+    <div class="header-middle-right">
+      <ul class="header-middle-right-list">
+            <li class="header-middle-right-item dropdown">
+              <i class="fa-light fa-user"></i>
+              <div class="auth-container">
+                <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+              </div>
+              <ul class="header-middle-right-menu">
+                <li><a id="login" href="javascript:;"><i class="fa-light fa-right-to-bracket"></i> Đăng nhập</a></li>
+                <li><a id="signup" href="javascript:;"><i class="fa-light fa-user-plus"></i> Đăng ký</a></li>
+              </ul>
+            </li>
+            <li class="header-middle-right-item" onclick="openCart()">
+              <div class="cart-icon-menu">
+                <i class="fa-light fa-basket-shopping"></i>
+                <span class="count-product-cart">0</span>
+              </div>
+              <span>Giỏ hàng</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal signup-login">
+        <div class="modal-container">
+          <button class="form-close" onclick="closeModal()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+          <div class="forms mdl-cnt">
+            <div class="form-content sign-up">
+        <h3 class="form-title">Đăng ký tài khoản</h3>
+        <p class="form-description">Đăng ký thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi </p>
+        <form action="" class="signup-form">
+          <div class="form-group">
+            <label for="fullname" class="form-label">Tên đầy đủ</label>
+            <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Sinh" class="form-control">
+            <span class="form-message-name form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input id="phone" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+            <span class="form-message-phone form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message-password form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+            <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+            <span class="form-message-password-confi form-message"></span>
+          </div>
+          <div class="form-group">
+            <input class="checkbox" name="checkbox" required="" type="checkbox" id="checkbox-signup">
+            <label for="checkbox-signup" class="form-checkbox"><a href="#"title="Tôi đồng ý với chính sách trang web" target="_blank">Tôi đồng ý với chính sách trang web</a></label>
+            <p class="form-message-checkbox form-message"></p>
+          </div>
+          <button class="form-submit" id="signup-button">Đăng ký</button>
+        </form>
+        <p class="change-login">Bạn đã có tài khoản ? <a href="javascript:;" class="login-link">Đăng nhập ngay</a></p>
+      </div>
+      <div class="form-content login">
+        <h3 class="form-title">Đăng nhập tài khoản</h3>
+        <p class="form-description">Đăng nhập thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúngtôi</p>
+        <form action="" class="login-form">
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input id="phone-login" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+            <span class="form-message phonelog"></span>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password-login" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message-check-login form-message"></span>
+          </div>
+          <button class="form-submit" id="login-button">Đăng nhập</button>
+        </form>
+        <p class="change-login">Bạn chưa có tài khoản ? <a href="javascript:;" class="signup-link">Đăng kí ngay</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-cart">
+  <div class="cart-container">
+    <div class="cart-header">
+        <h3 class="cart-header-title"><i class="fa-light fa-basket-shopping"></i> Giỏ hàng của bạn</h3>
+        <button class="cart-close" onclick="closeCart()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body">
+        <div class="gio-hang-trong">
+            <i class="fa-thin fa-cart-xmark"></i>
+            <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
+        </div>
+        <ul class="cart-list">
+        </ul>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total-price">
+            <p class="text-tt">Tổng tiền:</p>
+            <p class="text-price">0đ</p>
+        </div>
+        <div class="cart-footer-payment">
+            <button class="them-mon"><i class="fa-regular fa-plus"></i> Thêm món</button>
+            <button class="thanh-toan disabled">Thanh toán</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+  <header class="header-nav">
+    <div class="nav-container">
+        <div class="nav-item-wrap">
+            <a href="Trangchu.html" class="nav-item"><i class="fa-solid fa-house"></i> TRANG CHỦ</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="khuyenmai.html?promo=sale-50" class="nav-item">🔥 KHUYẾN MÃI HOT 🔥</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Sanpham.html" class="nav-item">SẢN PHẨM <i class="fa-solid fa-angle-down" style="font-size: 11px;"></i></a>
+            <div class="simple-dropdown">
+                <ul>
+                        <li><a href="Sanpham.html?category=Nước%20hoa">Nước hoa</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20cơ%20thể">Chăm sóc cơ thể</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20tóc">Chăm sóc tóc</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20da%20mặt">Chăm sóc da mặt</a></li>
+                         <li><a href="Sanpham.html?category=Trang%20điểm">Trang điểm</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Gioithieu.html" class="nav-item">GIỚI THIỆU</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Lienhe.html" class="nav-item">LIÊN HỆ</a>
+        </div>
+        </header>
+</div>
+<!-- MOBILE SIDEBAR MENU -->
+<div class="mobile-sidebar-overlay"></div>
+<div class="mobile-sidebar">
+    <div class="mobile-search-box">
+        <input type="text" id="mobileSearchInput" placeholder="TÌm sản phẩm..." autocomplete="off">
+    </div>
+    
+    <ul class="mobile-nav-menu">
+        <li class="mobile-nav-item">
+            <a href="Trangchu.html"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="khuyenmai.html?promo=sale-50"><i class="fa-solid fa-fire"></i> Khuyến Mãi Hot</a>
+        </li>
+        <li class="mobile-nav-item has-submenu">
+            <a href="javascript:;"><i class="fa-solid fa-bag-shopping"></i> Sản Phẩm</a>
+            <ul class="mobile-submenu">
+                <li><a href="Sanpham.html?category=Nước%20hoa">Nước Hoa</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20cơ%20thể">Chăm Sóc Cơ Thể</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20tóc">Chăm Sóc Tóc</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20da%20mặt">Chăm Sóc Da Mặt</a></li>
+                <li><a href="Sanpham.html?category=Trang%20điểm">Trang Điểm</a></li>
+            </ul>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="Gioithieu.html"><i class="fa-solid fa-circle-info"></i> Giới Thiệu</a>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="Lienhe.html"><i class="fa-solid fa-phone"></i> Liên Hệ</a>
+        </li>
+    </ul>
+</div>
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <ul class="breadcrumb-list">
+      <li><a href="Trangchu.html">Trang chủ</a></li>
+      <li><a href="Sanpham.html">Chăm sóc da mặt</a></li>
+      <li id="breadcrumb-product">Kem chống nắng</li>
+    </ul>
+  </div>
+  <!-- PRODUCT DETAIL -->
+  <div class="product-detail-wrapper">
+    <div class="product-detail-grid">
+      <!-- LEFT: IMAGE -->
+      <div class="product-gallery">
+        <div class="product-main-img">
+          <img id="mainImg" src="">
+        </div>
+        <div class="product-thumbnails">
+          <div class="thumbnail active" onclick="changeImage(this)">
+            <img id="thumb1" src="">
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: INFO -->
+      <div class="product-info">
+        <!-- HEADER -->
+        <div class="product-header">
+          <span class="best-seller-badge"><i class="fa-solid fa-fire"></i> BEST SELLER</span>
+          <h1 class="product-title" id="productTitle"></h1>
+          <div class="product-rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span id="ratingValue">4.9</span>
+            <span class="review-count" id="reviewCount">245 đánh giá</span>
+            <span class="sold-count" id="soldCount">| 3,200 đã bán</span>
+          </div>
+        </div>
+        <!-- PRICE -->
+        <div class="price-section">
+          <span class="price-current" id="priceNow">350.000đ</span>
+          <span class="price-old-wrapper">
+            <span class="price-old" id="priceOld">412.000đ</span>
+            <span class="discount-badge" id="discountBadge">-15%</span>
+          </span>
+        </div>
+
+        <!-- QUANTITY -->
+        <div class="quantity-section">
+          <span style="font-weight: 600;">Số lượng</span>
+          <div class="quantity-control">
+            <button class="quantity-btn" onclick="decreaseQty()">−</button>
+            <input type="number" class="quantity-input" id="quantity" value="1" min="1" max="100">
+            <button class="quantity-btn" onclick="increaseQty()">+</button>
+          </div>
+        </div>
+        <!-- BUTTONS -->
+        <div class="action-buttons">
+          <button class="btn-add-cart" id="addCartBtn"><i class="fa-light fa-basket-shopping"></i> THÊM VÀO GIỎ</button>
+          <button class="btn-buy-now" id="buyNowBtn"><i class="fa-light fa-zap"></i> MUA NGAY</button>
+        </div>
+        <!-- VOUCHER -->
+        <div class="voucher-section">
+          <div class="voucher-title"><i class="fa-light fa-ticket"></i> VOUCHER TIẾT KIỆM</div>
+          <div class="voucher-tags">
+            <span class="voucher-tag">🎁 Mã giảm giá</span>
+            <span class="voucher-tag">🚚 Freeship lv 195</span>
+            <span class="voucher-tag">💳 Promo lv 195</span>
+          </div>
+        </div>
+        <!-- BENEFITS -->
+        <div class="benefits-section">
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-light fa-circle-check"></i></div>
+            <div class="benefit-text">
+              <strong>Được gọi bán</strong>
+              Chính sách hoàn tiền 100%
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-light fa-box"></i></div>
+            <div class="benefit-text">
+              <strong>Phí hỗ trợ vận chuyển</strong>
+              Một thương quyết công hàng
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-light fa-shield"></i></div>
+            <div class="benefit-text">
+              <strong>Kết cấu sản phẩm riêng</strong>
+              Phí hỗ trợ hàng hóa
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-light fa-truck"></i></div>
+            <div class="benefit-text">
+              <strong>Người thương quyết công hàng</strong>
+              Chuyển từ chứng sở được tại
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="product-description">
+      <h2 class="description-title">Mô tả sản phẩm</h2>
+      <p class="description-text" id="fullDescription"></p>
+    </div>
+  </div>
+<!-- ============ REVIEW SECTION ============ -->
+<div class="review-wrapper">
+    <div class="review-container">
+        <!-- REVIEW FORM -->
+        <div class="review-form-wrapper">
+            <h3 class="form-title"><i class="fas fa-pen-fancy"></i> Viết Đánh Giá</h3>
+            <form class="review-form" id="reviewForm">
+                <div class="form-group">
+                    <label class="form-label">Tên của bạn</label>
+                    <input 
+                        type="text" 
+                        class="form-control review-input" 
+                        id="reviewerName" 
+                        placeholder="Nhập tên của bạn" 
+                        maxlength="50"
+                    >
+                    <span class="form-error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Xếp hạng</label>
+                    <div class="rating-selector" id="ratingSelector">
+                        <button type="button" class="star-btn" data-rating="1" title="Tệ">
+                            <i class="fas fa-star"></i>
+                        </button>
+                        <button type="button" class="star-btn" data-rating="2" title="Không tốt">
+                            <i class="fas fa-star"></i>
+                        </button>
+                        <button type="button" class="star-btn" data-rating="3" title="Bình thường">
+                            <i class="fas fa-star"></i>
+                        </button>
+                        <button type="button" class="star-btn" data-rating="4" title="Tốt">
+                            <i class="fas fa-star"></i>
+                        </button>
+                        <button type="button" class="star-btn" data-rating="5" title="Rất tốt">
+                            <i class="fas fa-star"></i>
+                        </button>
+                    </div>
+                    <span class="selected-rating" id="selectedRating">Chọn xếp hạng</span>
+                    <span class="form-error" id="ratingError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Nội dung đánh giá</label>
+                    <textarea 
+                        class="form-control review-textarea" 
+                        id="reviewContent" 
+                        placeholder="Chia sẻ trải nghiệm của bạn về sản phẩm này..." 
+                        rows="5"
+                        maxlength="500"
+                    ></textarea>
+                    <div class="textarea-counter">
+                        <span id="charCount">0</span>/500
+                    </div>
+                    <span class="form-error" id="contentError"></span>
+                </div>
+
+                <button type="submit" class="btn-submit-review">
+                    <i class="fas fa-paper-plane"></i> Gửi Đánh Giá
+                </button>
+            </form>
+        </div>
+
+        <!-- REVIEWS LIST -->
+        <div class="reviews-list-wrapper">
+            <h3 class="form-title"><i class="fas fa-comments"></i> Đánh Giá Từ Khách Hàng</h3>
+            <div class="reviews-list" id="reviewsList">
+                <!-- Reviews will be loaded here -->
+            </div>
+            <div class="no-reviews" id="noReviews" style="display: none;">
+                <i class="fas fa-inbox"></i>
+                <p>Chưa có đánh giá nào. Hãy trở thành người đầu tiên!</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--FOOTER-->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Cột 1: Logo + thông tin -->
+        <div class="footer-col company">
+            <img src="../images/LOGO.png" alt="Guardian" class="logo">
+
+            <p><b>CÔNG TY TNHH MTV THƯƠNG MẠI <BR> VÀ ĐẦU TƯ LIÊN Á CHÂU</b></p>
+            <p>Giấy chứng nhận đăng ký doanh <BR> nghiệp số 0310618188</p>
+            <p>Tự sở chính: L2-VP-01, 346 Bến Vân Đồn, TP.HCM</p>
+            <p>Hotline: <span class="hotline">19004449</span></p>
+
+            
+        </div>
+
+        <!-- Cột 2: mạng xã hội + app -->
+        <div class="footer-col social">
+            <h3><STRONG>Theo dõi chúng tôi</STRONG></h3>
+            <div class="social-icons">
+
+    <div class="social-icons">
+    <a href="https://www.facebook.com/guardianvn" target="_blank">
+        <img src="../images/FB.JPG">
+    </a>
+
+    <a href="https://www.instagram.com/guardianvn" target="_blank">
+        <img src="../images/IG.JPG">
+    </a>
+
+    <a href="https://www.youtube.com/@guardianvietnam" target="_blank">
+        <img src="../images/YT.JPG">
+    </a>
+
+    <a href="https://www.tiktok.com/@guardianvietnam" target="_blank">
+        <img src="../images/TT.jpg">
+    </a>
+</div>
+
+</div>
+
+            <h3>Tải App Ngay</h3>
+            <img src="../images/QR.JPG" class="qr">
+
+            <div class="app">
+                <a href="#"><img src="../images/ggplay_logo.png"></a>
+                <a href="#"><img src="../images/appstore.png"></a>
+            </div>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="footer-col">
+            <h3>Về chúng tôi</h3>
+            <ul>
+                <li><a href="Gioithieu.htm">Giới thiệu</a></li>
+                <li><a href="Lienhe.html">Liên hệ</a></li>
+                <li><a href="Lienhe.html">Địa chỉ cửa hàng</a></li>
+                <li><a href="../html/Thanhdieuhuong.html">Trang sitemap</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột 4 -->
+        <div class="footer-col">
+            <h3>Chính sách</h3>
+            <ul>
+                <li><a href="Chinhsach.html#tab1">Chính sách và quy định chung</a></li>
+                <li><a href="Chinhsach.html#tab2">Quy định thanh toán</a></li>
+                <li><a href="Chinhsach.html#tab3">Chính sách vận chuyển</a></li>
+                <li><a href="Chinhsach.html#tab4">Chính sách đổi trả</a></li>
+                <li><a href="Chinhsach.html#tab5">Bảo mật thông tin</a></li>
+                <li><a href="Chinhsach.html#tab6">Hướng dẫn mua hàng</a></li>
+                <li><a href="Chinhsach.html#tab7">Xuất hóa đơn</a></li>
+                <li><a href="Chinhsach.html#tab8">Điều khoản sử dụng</a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+   <div id="toast"></div>
+    <!-- ============ TOAST CONTAINER ============ -->
+    <script src="../js/initialization.js"></script>
+    <script src="../js/product-detail.js"></script>
+    <script src="../js/filter-products.js"></script>
+    <script src="../js/qutri.js"></script>
+    <script src="../js/account-management.js"></script>
+    <script src="../js/checkout.js"></script>
+    <script src="../js/toast-message.js"></script>
+    <script src="../js/product-list.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+</body>
+</html>

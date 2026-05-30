@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang danh mục sản phẩm</title>  
+  <script src="../js/initialization.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/topbar.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/search.css"/>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/product-detail.css"/>  
+  <link rel="stylesheet" href="../css/home-responsive.css">
+  <link rel="stylesheet" href="../css/header-responsive.css">
+  <link rel="stylesheet" href="../css/products-responsive.css">
+  <link rel="stylesheet" href="../css/footer-responsive.css">
+  <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/account-management.css"/>
+  <link rel="stylesheet" href="../css/product-list.css"/>
+  <script src="../js/notifition.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ 
+ 
+    
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-bar-content">
+        IP25K - GIẢM NGAY 25K CHO ĐƠN HÀNG 99K 
+        NHẬP MÃ T04FREESHIP20K - GIẢM NGAY 20K
+    </div>
+</div>
+<div>
+  <div class="header">
+    <!-- MENU TRẢ -->
+    <!-- MAIN -->
+    <div class="header-main">
+        <!-- HAMBURGER MENU (Mobile) -->
+        <button class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- LOGO -->
+        <div class="logo">
+    <img src="../images/LOGO3.png" alt="logo">
+  </div>
+  <div class="search-box position-relative">
+    <i class="fa fa-search"></i>
+    <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm..." autocomplete="off">
+    <div id="searchDropdown" class="search-dropdown">
+        <div id="boxSP">
+<h4 style="letter-spacing: 1px; font-weight: 700; font-family: Arial, sans-serif;">TỪ KHÓA GỢI Ý</h4>
+<ul id="listTuKhoa" class="suggested-keywords" style="margin-bottom: 20px;"></ul>
+
+<h4 style="letter-spacing: 1px; font-weight: 700; font-family: Arial, sans-serif;">SẢN PHẨM LIÊN QUAN</h4>
+<div id="listSanPham" class="search-product-list"></div>
+        </div>
+    </div>
+  </div>
+  <script src="../js/search.js"></script>
+  <div>
+    <div class="header-middle-right">
+      <ul class="header-middle-right-list">
+            <li class="header-middle-right-item dropdown">
+              <i class="fa-light fa-user"></i>
+              <div class="auth-container">
+                <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+              </div>
+              <ul class="header-middle-right-menu">
+                <li><a id="login" href="javascript:;"><i class="fa-light fa-right-to-bracket"></i> Đăng nhập</a></li>
+                <li><a id="signup" href="javascript:;"><i class="fa-light fa-user-plus"></i> Đăng ký</a></li>
+              </ul>
+            </li>
+            <li class="header-middle-right-item" onclick="openCart()">
+              <div class="cart-icon-menu">
+                <i class="fa-light fa-basket-shopping"></i>
+                <span class="count-product-cart">0</span>
+              </div>
+              <span>Giỏ hàng</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal signup-login">
+        <div class="modal-container">
+          <button class="form-close" onclick="closeModal()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+          <div class="forms mdl-cnt">
+            <div class="form-content sign-up">
+        <h3 class="form-title">Đăng ký tài khoản</h3>
+        <p class="form-description">Đăng ký thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi </p>
+        <form action="" class="signup-form">
+          <div class="form-group">
+            <label for="fullname" class="form-label">Tên đầy đủ</label>
+            <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Sinh" class="form-control">
+            <span class="form-message-name form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input id="phone" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+            <span class="form-message-phone form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message-password form-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+            <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+            <span class="form-message-password-confi form-message"></span>
+          </div>
+          <div class="form-group">
+            <input class="checkbox" name="checkbox" required="" type="checkbox" id="checkbox-signup">
+            <label for="checkbox-signup" class="form-checkbox"><a href="#"title="Tôi đồng ý với chính sách trang web" target="_blank">Tôi đồng ý với chính sách trang web</a></label>
+            <p class="form-message-checkbox form-message"></p>
+          </div>
+          <button class="form-submit" id="signup-button">Đăng ký</button>
+        </form>
+        <p class="change-login">Bạn đã có tài khoản ? <a href="javascript:;" class="login-link">Đăng nhập ngay</a></p>
+      </div>
+      <div class="form-content login">
+        <h3 class="form-title">Đăng nhập tài khoản</h3>
+        <p class="form-description">Đăng nhập thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúngtôi</p>
+        <form action="" class="login-form">
+          <div class="form-group">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input id="phone-login" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
+            <span class="form-message phonelog"></span>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password-login" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message-check-login form-message"></span>
+          </div>
+          <button class="form-submit" id="login-button">Đăng nhập</button>
+        </form>
+        <p class="change-login">Bạn chưa có tài khoản ? <a href="javascript:;" class="signup-link">Đăng kí ngay</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-cart">
+  <div class="cart-container">
+    <div class="cart-header">
+        <h3 class="cart-header-title"><i class="fa-light fa-basket-shopping"></i> Giỏ hàng của bạn</h3>
+        <button class="cart-close" onclick="closeCart()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body">
+        <div class="gio-hang-trong">
+            <i class="fa-thin fa-cart-xmark"></i>
+            <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
+        </div>
+        <ul class="cart-list">
+        </ul>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total-price">
+            <p class="text-tt">Tổng tiền:</p>
+            <p class="text-price">0đ</p>
+        </div>
+        <div class="cart-footer-payment">
+            <button class="them-mon"><i class="fa-regular fa-plus"></i> Thêm món</button>
+            <button class="thanh-toan disabled">Thanh toán</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+  <header class="header-nav">
+    <div class="nav-container">
+        <div class="nav-item-wrap">
+            <a href="Trangchu.html" class="nav-item"><i class="fa-solid fa-house"></i> TRANG CHỦ</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="khuyenmai.html?promo=sale-50" class="nav-item">🔥 KHUYẾN MÃI HOT 🔥</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Sanpham.html" class="nav-item">SẢN PHẨM <i class="fa-solid fa-angle-down" style="font-size: 11px;"></i></a>
+            <div class="simple-dropdown">
+                <ul>
+                        <li><a href="Sanpham.html?category=Nước%20hoa">Nước hoa</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20cơ%20thể">Chăm sóc cơ thể</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20tóc">Chăm sóc tóc</a></li>
+                        <li><a href="Sanpham.html?category=Chăm%20sóc%20da%20mặt">Chăm sóc da mặt</a></li>
+                         <li><a href="Sanpham.html?category=Trang%20điểm">Trang điểm</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Gioithieu.html" class="nav-item">GIỚI THIỆU</a>
+        </div>
+        <div class="nav-item-wrap">
+            <a href="Lienhe.html" class="nav-item">LIÊN HỆ</a>
+        </div>
+        </header>
+</div>
+
+<!-- MOBILE SIDEBAR MENU -->
+<div class="mobile-sidebar-overlay"></div>
+<div class="mobile-sidebar">
+    <div class="mobile-search-box">
+        <input type="text" id="mobileSearchInput" placeholder="Tìm sản phẩm..." autocomplete="off">
+    </div>
+    
+    <ul class="mobile-nav-menu">
+        <li class="mobile-nav-item">
+            <a href="Trangchu.html"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="khuyenmai.html?promo=sale-50"><i class="fa-solid fa-fire"></i> Khuyến Mãi Hot</a>
+        </li>
+        <li class="mobile-nav-item has-submenu">
+            <a href="javascript:;"><i class="fa-solid fa-bag-shopping"></i> Sản Phẩm</a>
+            <ul class="mobile-submenu">
+                <li><a href="Sanpham.html?category=Nước%20hoa">Nước Hoa</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20cơ%20thể">Chăm Sóc Cơ Thể</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20tóc">Chăm Sóc Tóc</a></li>
+                <li><a href="Sanpham.html?category=Chăm%20sóc%20da%20mặt">Chăm Sóc Da Mặt</a></li>
+                <li><a href="Sanpham.html?category=Trang%20điểm">Trang Điểm</a></li>
+            </ul>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="Gioithieu.html"><i class="fa-solid fa-circle-info"></i> Giới Thiệu</a>
+        </li>
+        <li class="mobile-nav-item">
+            <a href="Lienhe.html"><i class="fa-solid fa-phone"></i> Liên Hệ</a>
+        </li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="container-main">
+    <div class="content-wrapper">
+        <!-- SIDEBAR (LEFT) -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">DANH MỤC</h3>
+                <ul class="category-list">
+                    <li><a href="javascript:;" onclick="filterByCategory('Tất cả')" class="category-item active" data-category="Tất cả">Tất cả</a></li>
+                    <li><a href="javascript:;" onclick="filterByCategory('Chăm sóc da mặt')" class="category-item" data-category="Chăm sóc da mặt">Chăm sóc da mặt</a></li>
+                    <li><a href="javascript:;" onclick="filterByCategory('Trang điểm')" class="category-item" data-category="Trang điểm">Trang điểm</a></li>
+                    <li><a href="javascript:;" onclick="filterByCategory('Chăm sóc tóc')" class="category-item" data-category="Chăm sóc tóc">Chăm sóc tóc</a></li>
+                    <li><a href="javascript:;" onclick="filterByCategory('Chăm sóc cơ thể')" class="category-item" data-category="Chăm sóc cơ thể">Chăm sóc cơ thể</a></li>
+                    <li><a href="javascript:;" onclick="filterByCategory('Nước hoa')" class="category-item" data-category="Nước hoa">Nước hoa</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">KHOẢNG GIÁ</h3>
+                <div class="price-filter">
+                    <div class="price-input-group">
+                        <input type="number" id="priceMin" placeholder="Từ" min="0" class="price-input">
+                        <span class="price-separator">-</span>
+                        <input type="number" id="priceMax" placeholder="Đến" min="0" class="price-input">
+                    </div>
+                    <button class="btn-apply-price" onclick="filterByPrice()">Áp dụng</button>
+                </div>
+
+                <div class="quick-price-filters">
+                    <button class="quick-price-btn" onclick="filterByQuickPrice(0, 500000)">0 - 500K</button>
+                    <button class="quick-price-btn" onclick="filterByQuickPrice(500000, 1000000)">500K - 1M</button>
+                    <button class="quick-price-btn" onclick="filterByQuickPrice(1000000, 100000000)">Trên 1M</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT (RIGHT) -->
+        <section class="main-content">
+            <!-- SORTING BAR -->
+            <div class="sorting-bar">
+                <div class="sorting-container">
+                    <span class="sorting-label">Sắp xếp:</span>
+                    <button class="sort-btn active" onclick="sortProducts('newest')">Mới nhất</button>
+                    <button class="sort-btn" onclick="sortProducts('bestseller')">Bán chạy</button>
+                    <button class="sort-btn" onclick="sortProducts('price-asc')">Giá thấp đến cao</button>
+                    <button class="sort-btn" onclick="sortProducts('price-desc')">Giá cao đến thấp</button>
+                </div>
+            </div>
+
+            <!-- PRODUCT COUNT -->
+            <div class="product-count">
+                Hiển thị <span id="productCount">0</span> sản phẩm
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be injected here by JavaScript -->
+            </div>
+
+            <!-- EMPTY STATE -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <i class="fa-regular fa-inbox"></i>
+                <p>Không tìm thấy sản phẩm nào</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+    <!--FOOTER-->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Cột 1: Logo + thông tin -->
+        <div class="footer-col company">
+            <img src="../images/LOGO.png" alt="Guardian" class="logo">
+
+            <p><b>CÔNG TY TNHH MTV THƯƠNG MẠI <BR> VÀ ĐẦU TƯ LIÊN Á CHÂU</b></p>
+            <p>Giấy chứng nhận đăng ký doanh <BR> nghiệp số 0310618188</p>
+            <p>Tự sở chính: L2-VP-01, 346 Bến Vân Đồn, TP.HCM</p>
+            <p>Hotline: <span class="hotline">19004449</span></p>
+
+            
+        </div>
+
+        <!-- Cột 2: mạng xã hội + app -->
+        <div class="footer-col social">
+            <h3><STRONG>Theo dõi chúng tôi</STRONG></h3>
+            <div class="social-icons">
+
+    <div class="social-icons">
+    <a href="https://www.facebook.com/guardianvn" target="_blank">
+        <img src="../images/FB.JPG">
+    </a>
+
+    <a href="https://www.instagram.com/guardianvn" target="_blank">
+        <img src="../images/IG.JPG">
+    </a>
+
+    <a href="https://www.youtube.com/@guardianvietnam" target="_blank">
+        <img src="../images/YT.JPG">
+    </a>
+
+    <a href="https://www.tiktok.com/@guardianvietnam" target="_blank">
+        <img src="../images/TT.jpg">
+    </a>
+</div>
+
+</div>
+
+            <h3><STRONG>Tải App Ngay</STRONG></h3>
+            <img src="../images/QR.JPG" class="qr">
+
+            <div class="app">
+                <a href="#"><img src="../images/ggplay_logo.png"></a>
+                <a href="#"><img src="../images/appstore.png"></a>
+            </div>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="footer-col">
+            <h3><STRONG>Về chúng tôi</STRONG></h3>
+            <ul>
+                <li><a href="Gioithieu.htm">Giới thiệu</a></li>
+                <li><a href="Lienhe.html">Liên hệ</a></li>
+                <li><a href="Lienhe.html">Địa chỉ cửa hàng</a></li>
+                <li><a href="../html/Thanhdieuhuong.html">Trang sitemap</a></li>
+            </ul>
+        </div>
+
+        <!-- Cột 4 -->
+        <div class="footer-col">
+            <h3><STRONG>Chính sách</STRONG></h3>
+            <ul>
+                <li><a href="Chinhsach.html#tab1">Chính sách và quy định chung</a></li>
+                <li><a href="Chinhsach.html#tab2">Quy định thanh toán</a></li>
+                <li><a href="Chinhsach.html#tab3">Chính sách vận chuyển</a></li>
+                <li><a href="Chinhsach.html#tab4">Chính sách đổi trả</a></li>
+                <li><a href="Chinhsach.html#tab5">Bảo mật thông tin</a></li>
+                <li><a href="Chinhsach.html#tab6">Hướng dẫn mua hàng</a></li>
+                <li><a href="Chinhsach.html#tab7">Xuất hóa đơn</a></li>
+                <li><a href="Chinhsach.html#tab8">Điều khoản sử dụng</a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+
+<STYLE>
+    .footer{
+    background:#f3f3f3;
+    padding:40px 0;
+    font-family:Arial;
+}
+
+.footer-container{
+    width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+}
+
+.footer-col{
+    width:25%;
+}
+
+.footer-col h3{
+    margin-bottom:15px;
+}
+
+.footer-col ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-col ul li{
+    margin:8px 0;
+}
+
+.footer-col ul li a{
+    text-decoration:none;
+    color:#333;
+}
+
+.footer-col ul li a:hover{
+    color:orange;
+}
+
+.logo{
+    width:140px;
+    margin-bottom:10px;
+}
+
+.social-icons img{
+    width:28px;
+    margin-right:10px;
+}
+
+.qr{
+    width:100px;
+    margin:10px 0;
+}
+
+.app img{
+    width:120px;
+    margin:5px 0;
+}
+
+.hotline{
+    color:orange;
+    font-weight:bold;
+}
+
+.bct{
+    width:180px;
+    margin-top:10px;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons img{
+    width:30px;
+}
+</STYLE>
+<div id="cartModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-[100]">
+        <div class="bg-white w-full max-w-md mx-4 rounded-3xl overflow-hidden">
+            <div class="bg-green-500 text-white p-6">
+                <h2 class="text-2xl font-bold">Giỏ hàng của bạn</h2>
+            </div>
+            <div class="p-6" id="cartContent">
+                <p class="text-center text-gray-400 py-10">Giỏ hàng trống</p>
+            </div>
+            <div class="p-6 border-t">
+                <button onclick="toggleCart()" 
+                        class="w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-2xl font-bold">
+                    ĐÓNG
+                </button>
+            </div>
+        </div>
+    </div>
+
+        <div class="container" id="account-user">
+            <div class="main-account">
+                <div class="main-account-header">
+                    <h3>Thông tin tài khoản của bạn</h3>
+                    <p>Quản lý thông tin để bảo mật tài khoản</p>
+                </div>
+                <div class="main-account-body">
+                    <div class="main-account-body-col">
+                        <form action="" class="info-user">
+                            <div class="form-group">
+                                <label for="infoname" class="form-label">Họ và tên</label>
+                                <input class="form-control" type="text" name="infoname" id="infoname" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="infophone" class="form-label">Số điện thoại</label>
+                                <input class="form-control" type="text" name="infophone" id="infophone" disabled="true"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="infoemail" class="form-label">Email</label>
+                                <input class="form-control" type="email" name="infoemail" id="infoemail"
+                                    placeholder="Thêm địa chỉ email của bạn">
+                                <span class="inforemail-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="infoaddress" class="form-label">Địa chỉ</label>
+                                <input class="form-control" type="text" name="infoaddress" id="infoaddress"
+                                    placeholder="Thêm địa chỉ giao hàng của bạn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="main-account-body-col">
+                        <form action="" class="change-password">
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Mật khẩu hiện tại</label>
+                                <input class="form-control" type="password" name="" id="password-cur-info"
+                                    placeholder="Nhập mật khẩu hiện tại">
+                                <span class="password-cur-info-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Mật khẩu mới </label>
+                                <input class="form-control" type="password" name="" id="password-after-info"
+                                    placeholder="Nhập mật khẩu mới">
+                                <span class="password-after-info-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Xác nhận mật khẩu mới</label>
+                                <input class="form-control" type="password" name="" id="password-comfirm-info"
+                                    placeholder="Nhập lại mật khẩu mới">
+                                <span class="password-after-comfirm-error form-message"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="main-account-body-row">
+                        <div>
+                            <button id="save-info-user" onclick="changeInformation()"><i
+                                    class="fa-regular fa-floppy-disk"></i> Lưu thay đổi</button>
+                        </div>
+                        <div>
+                            <button id="save-password" onclick="changePassword()"><i class="fa-regular fa-key"></i> Đổi
+                                mật khẩu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="order-history">
+            <div class="main-account">
+                <div class="main-account-header">
+                    <h3>Quản lý đơn hàng của bạn</h3>
+                    <p>Xem chi tiết, trạng thái của những đơn hàng đã đặt.</p>
+                </div>
+                <div class="main-account-body">
+                    <div class="order-history-section">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal product-detail">
+        <button class="modal-close close-popup"><i class="fa-thin fa-xmark"></i></button>
+        <div class="modal-container mdl-cnt" id="product-detail-content">
+        </div>
+    </div>
+    <div class="back-to-top">
+        <a href="#"><i class="fa-regular fa-arrow-up"></i></a>
+    </div>
+    
+    <div id="toast"></div>
+    <script src="../js/filter-products.js"></script>
+    <script src="../js/qutri.js"></script>
+    <script src="../js/checkout.js"></script>
+    <script src="../js/toast-message.js"></script>
+    <script src="../js/account-management.js"></script>
+    <script src="../js/product-list.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/initialization.js"></script>
+</body>
+</html>
+

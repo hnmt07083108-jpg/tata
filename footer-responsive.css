@@ -1,0 +1,254 @@
+
+.footer {
+    background: #f3f3f3;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.footer-col h3 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    word-break: break-word;
+}
+
+.footer-col p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 0 10px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin: 8px 0;
+    font-size: 13px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    word-break: break-word;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #ff6b00;
+}
+
+.footer-col.company .logo {
+    width: 140px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 1px 0;
+    flex-wrap: wrap;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.qr {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0;
+    display: block;
+    object-fit: contain;
+}
+
+.app {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.app a {
+    display: inline-block;
+}
+
+.app img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.hotline {
+    color: #ff6b00;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .footer-col h3 {
+        font-size: 13px;
+    }
+
+    .footer-col p,
+    .footer-col ul li,
+    .footer-col ul li a {
+        font-size: 12px;
+    }
+
+    .footer-col.company .logo {
+        width: 120px;
+    }
+
+    .qr {
+        width: 80px;
+        height: 80px;
+    }
+
+    .app img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        padding: 25px 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .footer-col {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .footer-col:last-child {
+        border-bottom: none;
+    }
+
+    .footer-col h3 {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .footer-col p,
+    .footer-col ul li,
+    .footer-col ul li a {
+        font-size: 12px;
+    }
+
+    .footer-col.company .logo {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        gap: 8px;
+        margin: 10px 0;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .qr {
+        width: 70px;
+        height: 70px;
+        margin: 10px 0;
+    }
+
+    .app {
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .app img {
+        width: 100px;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 479px) {
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer-container {
+        gap: 15px;
+        padding: 0 12px;
+    }
+
+    .footer-col h3 {
+        font-size: 12px;
+    }
+
+    .footer-col p,
+    .footer-col ul li,
+    .footer-col ul li a {
+        font-size: 11px;
+    }
+
+    .footer-col.company .logo {
+        width: 80px;
+    }
+
+    .social-icons {
+        gap: 6px;
+    }
+
+    .social-icons img {
+        width: 22px;
+    }
+
+    .qr {
+        width: 60px;
+        height: 60px;
+    }
+
+    .app img {
+        width: 90px;
+    }
+}

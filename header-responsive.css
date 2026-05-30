@@ -1,0 +1,552 @@
+
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    width: 30px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ============================================
+   MOBILE SIDEBAR MENU
+   ============================================ */
+
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+    padding-top: 60px;
+}
+
+.mobile-sidebar.active {
+    transform: translateX(0);
+}
+
+.mobile-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
+
+.mobile-sidebar-overlay.active {
+    display: block;
+}
+
+.mobile-search-box {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-search-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.mobile-nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.mobile-nav-item a:hover {
+    background: #fff5ed;
+    color: #ff6b00;
+    padding-left: 20px;
+}
+
+.mobile-nav-item i {
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+/* Submenu - Categories */
+.mobile-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background: #f9f9f9;
+}
+
+.mobile-nav-item.has-submenu > a::after {
+    content: "›";
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.mobile-nav-item.has-submenu.active .mobile-submenu {
+    display: block;
+}
+
+.mobile-submenu li a {
+    padding: 10px 15px 10px 45px;
+    font-size: 13px;
+}
+
+/* ============================================
+   HEADER RESPONSIVE - BREAKPOINTS
+   ============================================ */
+
+/* ============================================
+   DESKTOP (1024px +)
+   ============================================ */
+
+@media (min-width: 1024px) {
+    .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px 20px;
+        flex-wrap: nowrap;
+    }
+
+    .header .logo {
+        flex-shrink: 0;
+        width: auto;
+    }
+
+    .header .logo img {
+        width: 200px !important;
+        height: auto !important;
+    }
+
+    .search-box {
+        flex: 1;
+        min-width: 250px;
+        margin: 0;
+    }
+
+    .search-box input {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+
+    .header-middle-right {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-middle-right-list {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .header-middle-right-item span {
+        display: inline;
+    }
+
+    .hamburger-menu {
+        display: none !important;
+    }
+
+    .header-nav {
+        display: flex !important;
+    }
+}
+
+/* ============================================
+   TABLET (768px - 1023px)
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 15px;
+        flex-wrap: nowrap;
+    }
+
+    .header .logo img {
+        width: 150px !important;
+        height: auto !important;
+    }
+
+    .search-box {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .search-box input {
+        padding: 8px 35px;
+        font-size: 12px;
+    }
+
+    .search-box i {
+        left: 12px;
+        font-size: 14px;
+    }
+
+    .header-middle-right-list {
+        gap: 15px;
+    }
+
+    .header-middle-right-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .header-middle-right-item span {
+        display: inline;
+        font-size: 12px;
+    }
+
+    .header-middle-right-item i {
+        font-size: 18px;
+    }
+
+    .hamburger-menu {
+        display: none !important;
+    }
+
+    .header-nav {
+        display: flex !important;
+        height: auto;
+        min-height: 40px;
+    }
+
+    .nav-container {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
+    .nav-item {
+        padding: 0 10px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    /* Ẩn thanh cuộn ngang */
+    .nav-container::-webkit-scrollbar {
+        height: 2px;
+    }
+
+    .nav-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .nav-container::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 5px;
+    }
+}
+
+/* ============================================
+   MOBILE (480px - 767px)
+   ============================================ */
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 8px 10px;
+        flex-wrap: nowrap;
+    }
+
+    .header .logo img {
+        width: 120px !important;
+        height: auto !important;
+    }
+
+    .search-box {
+        display: none; /* Ẩn search box trên mobile */
+    }
+
+    .header-middle-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header-middle-right-list {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .header-middle-right-item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .header-middle-right-item span {
+        display: none; 
+    }
+
+    .header-middle-right-item i {
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    .count-product-cart {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #ff6b00;
+        color: white;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+    /* Hamburger Menu - Hiển thị */
+    .hamburger-menu {
+        display: flex !important;
+        order: -1; /* Ở bên trái */
+    }
+
+    /* Header nav - Ẩn */
+    .header-nav {
+        display: none !important;
+    }
+
+    /* Dropdown menu - Ẩn trên mobile */
+    .header-middle-right-menu {
+        display: none;
+    }
+
+    .header-middle-right-item.dropdown:hover .header-middle-right-menu {
+        display: none;
+    }
+}
+
+/* ============================================
+   MOBILE NHỎ (dưới 480px)
+   ============================================ */
+
+@media (max-width: 479px) {
+    .header {
+        padding: 8px 10px;
+    }
+
+    .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        padding: 6px 8px;
+        flex-wrap: nowrap;
+    }
+
+    .header .logo img {
+        width: 100px !important;
+        height: auto !important;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .header-middle-right {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .header-middle-right-list {
+        display: flex;
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-middle-right-item i {
+        font-size: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex !important;
+        width: 28px;
+        height: 22px;
+        gap: 5px;
+    }
+
+    .hamburger-menu span {
+        width: 100%;
+        height: 2px;
+    }
+}
+
+/* ============================================
+   EXTRA SMALL (dưới 320px)
+   ============================================ */
+
+@media (max-width: 319px) {
+    .header {
+        padding: 6px 8px;
+    }
+
+    .header-main {
+        padding: 5px 6px;
+        gap: 4px;
+    }
+
+    .header .logo img {
+        width: 80px !important;
+    }
+
+    .header-middle-right-list {
+        gap: 6px;
+    }
+
+    .header-middle-right-item i {
+        font-size: 16px;
+    }
+
+    .count-product-cart {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+    }
+}
+
+/* ============================================
+   DROPDOWN MENU STYLING
+   ============================================ */
+
+.header-middle-right-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.header-middle-right-menu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header-middle-right-menu li:last-child {
+    border-bottom: none;
+}
+
+.header-middle-right-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.header-middle-right-menu li a:hover {
+    background: #fff5ed;
+    color: #ff6b00;
+    padding-left: 20px;
+}
+
+/* ============================================
+   DROPDOWN - SHOW/HIDE ON HOVER (Desktop)
+   ============================================ */
+
+@media (min-width: 768px) {
+    .header-middle-right-item.dropdown:hover .header-middle-right-menu {
+        display: block !important;
+        animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Dropdown ẩn trên mobile */
+@media (max-width: 767px) {
+    .header-middle-right-menu {
+        display: none;
+    }
+}

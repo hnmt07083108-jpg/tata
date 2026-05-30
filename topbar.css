@@ -1,0 +1,1561 @@
+/* topbar chạy chữ */
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .top-bar {
+            background-color: #18b5a4;
+            overflow: hidden; /* ẩn phần dư */
+            white-space: nowrap;
+        }
+
+        .top-bar-content {
+            display: inline-block;
+            color: white;
+            padding: 10px 0;
+            font-weight: bold;
+            animation: chạy 15s linear infinite;
+        }
+
+        @keyframes chạy {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+/* header*/
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* ===== HEADER ===== */
+
+.header {
+    background: linear-gradient(to right, #ff6600);
+    padding: 10px 20px;
+    color: white;
+}
+
+/* menu trên */
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.header-top a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-top a:hover {
+    text-decoration: underline;
+}
+
+/* dòng chính */
+.header-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 10px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1 1 420px;
+    min-width: 220px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.right-group {
+    margin-left: auto; /* đẩy qua phải */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* logo */
+.header .logo {
+    width: auto !important;
+    max-width: none !important;
+    flex-shrink: 0;
+}
+
+.header .logo img {
+    width: 200px !important;   /* đổi 250 → 300 nếu muốn to hơn nữa */
+    max-width: none !important;
+    height: auto !important;
+    display: block;
+}
+
+/* search */
+
+.search-box input {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+/* nút */
+.btn {
+    background: #ff6600;
+    border-radius: 30px;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* giỏ hàng */
+.cart {
+    background: #ff6600;
+    border-radius: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
+        :root {
+            --text-dark: #333;
+            --border-line: #eaeaea;
+        }
+        .header-nav {
+            background-color: var(--orange-main);
+            height: 48px;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            position: relative;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        .nav-item-wrap { height: 100%; display: flex; align-items: center; cursor: pointer; position: relative; }
+        .nav-item {
+            color: #fff; text-decoration: none; font-weight: bold; font-size: 14px;
+            padding: 0 15px; height: 100%; display: flex; align-items: center; text-transform: uppercase;
+            transition: 0.2s; gap: 6px;
+        }
+        .nav-item:hover { color: #ffe0b2; }
+        .nav-item i { font-size: 15px; }
+        .simple-dropdown {
+            position: absolute; top: 48px; left: 0; min-width: 220px;
+            background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            visibility: hidden; opacity: 0; transition: 0.2s; z-index: 999;
+            border: 1px solid var(--border-line); border-top: none;
+        }
+        .nav-item-wrap:hover .simple-dropdown { visibility: visible; opacity: 1; }
+        .simple-dropdown ul { list-style: none; padding: 0; margin: 0; }
+        .simple-dropdown li { border-bottom: 1px solid var(--border-line); }
+        .simple-dropdown li:last-child { border-bottom: none; }
+        .simple-dropdown a { display: block; padding: 12px 15px; color: var(--text-dark); text-decoration: none; font-size: 13px; font-weight: normal; }
+        .simple-dropdown a:hover { color: var(--orange-main); background-color: #fc7d28; padding-left: 20px; transition: 0.2s; }
+ /* ===== footer ===== */
+      .footer{
+      background:#f3f3f3;
+      padding:40px 0;
+      font-family:Arial;
+  }
+
+  .footer-container{
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 15px;
+  }
+
+  .footer-col{
+      flex: 1 1 220px;
+      min-width: 220px;
+      width: calc(25% - 20px);
+      text-align: left;
+  }
+
+  .footer-col h3{
+      margin-bottom:15px;
+  }
+
+  .footer-col ul{
+      list-style:none;
+      padding:0;
+  }
+
+  .footer-col ul li{
+      margin:8px 0;
+  }
+
+  .footer-col ul li a{
+      text-decoration:none;
+      color:#333;
+  }
+
+  .footer-col ul li a:hover{
+      color:orange;
+  }
+
+  .logo{
+      width:140px;
+      margin-bottom:10px;
+  }
+
+  .social-icons img{
+      width:28px;
+      margin-right:10px;
+  }
+
+  .qr{
+      width:100px;
+      margin:10px 0;
+  }
+
+  .app img{
+      width:120px;
+      margin:5px 0;
+  }
+
+  .hotline{
+      color:orange;
+      font-weight:bold;
+  }
+
+  .bct{
+      width:180px;
+      margin-top:10px;
+  }
+
+  .social-icons{
+      display:flex;
+      gap:10px;
+  }
+
+  .social-icons img{
+      width:30px;
+  }
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  .header-main {
+      justify-content: center;
+  }
+
+  .search-box {
+      margin: 0;
+      flex: 1 1 100%;
+      min-width: 0;
+  }
+
+  .header-nav {
+      min-height: auto;
+  }
+
+  .nav-container {
+      justify-content: flex-start;
+      gap: 8px;
+      padding-left: 10px;
+      padding-right: 10px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+  }
+
+  .nav-item {
+      padding: 0 12px;
+      white-space: nowrap;
+  }
+
+  .footer-col {
+      width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .header-top {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 5px 10px;
+  }
+
+  .header-main {
+      width: 100%;
+      padding: 8px 10px;
+      gap: 10px;
+  }
+
+  .header .logo img {
+      width: 160px !important;
+      max-width: 100%;
+      height: auto !important;
+  }
+
+  .search-box {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin: 0;
+  }
+
+  .search-box input {
+      width: 100%;
+      padding: 12px 16px 12px 44px;
+  }
+
+  .right-group {
+      width: 100%;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  .btn,
+  .cart {
+      min-width: 120px;
+      flex: 1 1 auto;
+      justify-content: center;
+  }
+
+  .header-nav {
+      display: none !important;
+  }
+
+  .footer {
+      padding: 30px 15px;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .footer-col {
+      width: 100%;
+      min-width: auto;
+      max-width: 100%;
+  }
+
+  .footer-col ul {
+      padding-left: 0;
+  }
+
+  .footer-top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px 0;
+  }
+
+  .footer-top-content {
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+  }
+
+  .footer-top-img img {
+      width: 180px;
+  }
+}
+
+
+:root {
+    /* Breakpoints */
+    --mobile-breakpoint: 576px;
+    --tablet-breakpoint: 768px;
+    --desktop-breakpoint: 992px;
+    --large-desktop: 1200px;
+    
+    /* Typography - Responsive với clamp() */
+    --font-h1: clamp(24px, 5vw, 24px);
+    --font-h2: clamp(20px, 4vw, 35px);
+    --font-h3: clamp(18px, 3.5vw, 18px);
+    --font-body: clamp(7px, 2.5vw, 13px);
+    --font-small: clamp(12px, 2vw, 12px);
+    --font-xs: clamp(10px, 1.5vw, 10px);
+    
+    /* Spacing - Responsive */
+    --spacing-xs: clamp(4px, 1vw, 4px);
+    --spacing-sm: clamp(8px, 2vw, 8px);
+    --spacing-md: clamp(12px, 3vw, 12px);
+    --spacing-lg: clamp(16px, 4vw, 16px);
+    --spacing-xl: clamp(24px, 5vw, 24px);
+    --spacing-xxl: clamp(32px, 8vw, 32px);
+}
+
+/* ========================================
+   1. HEADER MOBILE OPTIMIZATION
+   ======================================== */
+
+@media (max-width: 576px) {
+    /* Header chính - Mobile */
+    .header-middle .container {
+        padding: 7px 5px !important;
+        gap: 8px !important;
+    }
+    
+    /* Logo - Thu nhỏ */
+    .header-logo-img {
+        width: 80px !important;
+    }
+    
+    /* Search box - Ẩn trên mobile */
+    .header-middle-center {
+        display: none !important;
+    }
+    
+    /* Header right icons - Để riêng trên mobile */
+    .header-middle-right > ul {
+        gap: 8px !important;
+    }
+    
+    .header-middle-right-item i {
+        font-size: 16px !important;
+        margin-right: 0 !important;
+    }
+    
+    .header-middle-right-item span {
+        display: none !important;
+    }
+    
+    /* Hamburger menu icon - Thêm */
+    .mobile-menu-toggle {
+        display: flex !important;
+        width: 40px;
+        height: 40px;
+        background: var(--white);
+        border: none;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: var(--text-color);
+        order: -1;
+    }
+    
+    /* Mobile menu sidebar */
+    .mobile-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--white);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        padding-top: 20px;
+        overflow-y: auto;
+    }
+    
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+    
+    .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    
+    .mobile-menu-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    /* Search trong menu */
+    .mobile-menu .form-search {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .mobile-menu .form-search-input {
+        width: 80% !important;
+    }
+    
+    /* Navigation trong menu */
+    .mobile-menu .menu-list {
+        flex-direction: column !important;
+        height: auto !important;
+        overflow-x: visible !important;
+    }
+    
+    .mobile-menu .menu-link {
+        border-bottom: 1px solid #f0f0f0;
+        padding: 15px 20px !important;
+    }
+    
+    /* Header nav - Ẩn trên mobile */
+    .header-nav {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   2. TYPOGRAPHY - RESPONSIVE
+   ======================================== */
+
+/* Headings - Sử dụng clamp() */
+h1 {
+    font-size: var(--font-h1) !important;
+}
+
+h2 {
+    font-size: var(--font-h2) !important;
+}
+
+h3 {
+    font-size: var(--font-h3) !important;
+}
+
+.home-title {
+    font-size: var(--font-h2) !important;
+    margin-top: var(--spacing-lg) !important;
+}
+
+.dtud-title-text {
+    font-size: var(--font-h2) !important;
+}
+
+.fs-title {
+    font-size: var(--font-h2) !important;
+}
+
+/* Body text */
+body, p, span, a, li {
+    font-size: var(--font-body) !important;
+}
+
+.card-title-link {
+    font-size: var(--font-body) !important;
+}
+
+.dtud-p-name {
+    font-size: var(--font-small) !important;
+}
+
+.product-price .current-price {
+    font-size: var(--font-body) !important;
+}
+
+.product-price .old-price {
+    font-size: var(--font-small) !important;
+}
+
+/* Small text */
+.text-small, .dtud-p-brand, .dtud-p-stars {
+    font-size: var(--font-xs) !important;
+}
+
+/* ========================================
+   3. PRODUCT GRID - RESPONSIVE
+   ======================================== */
+
+/* Desktop - 4 cột */
+@media (min-width: 1200px) {
+    .home-products {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: var(--spacing-lg) !important;
+    }
+    
+    .col-product {
+        width: auto !important;
+        padding: 0 !important;
+    }
+    
+    .dtud-products-row {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: var(--spacing-md) !important;
+    }
+    
+    .dtud-banners-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Tablet - 2-3 cột */
+@media (max-width: 991px) and (min-width: 768px) {
+    .home-products {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--spacing-md) !important;
+    }
+    
+    .col-product {
+        width: auto !important;
+        padding: 0 !important;
+    }
+    
+    .dtud-products-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--spacing-sm) !important;
+    }
+    
+    .dtud-banners-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--spacing-md) !important;
+    }
+}
+
+/* Mobile - 2 cột hoặc 1 cột */
+@media (max-width: 767px) {
+    .home-products {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--spacing-sm) !important;
+    }
+    
+    .col-product {
+        width: auto !important;
+        padding: 0 !important;
+    }
+    
+    /* Cho mobile nhỏ - 1 cột */
+    @media (max-width: 480px) {
+        .home-products {
+            grid-template-columns: repeat(1, 1fr) !important;
+            gap: var(--spacing-xs) !important;
+        }
+    }
+    
+    /* Flash sale - 1.5 card trên mobile */
+    .fs-product-list {
+        gap: var(--spacing-sm) !important;
+    }
+    
+    .fs-card {
+        min-width: 150px !important;
+    }
+    
+    /* Đại tiệc ưu đãi - Responsive */
+    .dtud-products-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--spacing-sm) !important;
+    }
+    
+    .dtud-banners-row {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: var(--spacing-sm) !important;
+    }
+}
+
+/* ========================================
+   4. CARD & PRODUCT DETAILS
+   ======================================== */
+
+.card-product {
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+}
+
+.card-image {
+    height: auto !important;
+    aspect-ratio: 1;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-content {
+    padding: var(--spacing-sm) var(--spacing-xs) !important;
+}
+
+.card-footer {
+    padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-sm) !important;
+}
+
+.card-button {
+    width: 100% !important;
+    padding: var(--spacing-xs) !important;
+}
+
+@media (max-width: 767px) {
+    .card-product {
+        border: 1px solid #e5e5e5;
+    }
+    
+    .card-header strong {
+        font-size: 10px !important;
+        padding: 4px 8px !important;
+    }
+    
+    .card-content {
+        padding: var(--spacing-xs) !important;
+    }
+    
+    .card-title-link {
+        line-height: 1.3;
+        max-height: 2.6em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+/* ========================================
+   5. BANNER - RESPONSIVE
+   ======================================== */
+
+/* Banner responsive */
+.hero-slider img,
+.hero-slide img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 500px;
+    object-fit: cover !important;
+}
+
+@media (max-width: 767px) {
+    .hero-slide {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    
+    .hero-slide img {
+        width: 100% !important;
+        height: 250px !important;
+    }
+    
+    .full-banner {
+        height: 250px !important;
+    }
+}
+
+/* ========================================
+   6. SECTION SPACING - RESPONSIVE
+   ======================================== */
+
+.main-wrapper {
+    padding-top: var(--spacing-lg) !important;
+}
+
+.home-title-block {
+    padding: var(--spacing-md) !important;
+}
+
+.dtud-container-wrapper {
+    padding: var(--spacing-lg) 0 var(--spacing-xxl) !important;
+}
+
+.dtud-inner {
+    padding: 0 var(--spacing-md) !important;
+}
+
+.fs-wrapper {
+    padding: var(--spacing-lg) !important;
+    margin: var(--spacing-lg) auto !important;
+}
+
+.rainbow-brands {
+    padding: var(--spacing-xxl) 0 !important;
+}
+
+.home-service {
+    margin: var(--spacing-md) 0 !important;
+    gap: var(--spacing-md) !important;
+    padding: var(--spacing-sm) !important;
+}
+
+@media (max-width: 767px) {
+    .home-service-item {
+        width: calc(100% - 2 * var(--spacing-sm)) !important;
+        min-width: calc(100% - 2 * var(--spacing-sm)) !important;
+        padding: var(--spacing-md) !important;
+    }
+}
+
+/* ========================================
+   7. CONTAINER - FIX HORIZONTAL OVERFLOW
+   ======================================== */
+
+.container {
+    max-width: 100% !important;
+    padding: 0 var(--spacing-md) !important;
+    margin: 0 auto !important;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1130px;
+        padding: 0 10px;
+    }
+}
+
+/* Fix overflow */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   8. MODAL - RESPONSIVE
+   ======================================== */
+
+@media (max-width: 767px) {
+    .modal-container {
+        max-width: 95vw !important;
+        max-height: 85vh !important;
+    }
+    
+    .product-detail .modal-container {
+        width: 95vw !important;
+    }
+    
+    .signup-login .modal-container {
+        width: 95vw !important;
+    }
+    
+    .detail-order .modal-container {
+        width: 95vw !important;
+    }
+}
+
+/* ========================================
+   9. FOOTER - RESPONSIVE
+   ======================================== */
+
+@media (max-width: 767px) {
+    .footer-col {
+        width: 100% !important;
+        margin-bottom: var(--spacing-lg) !important;
+    }
+    
+    .footer-container {
+        padding: 0 var(--spacing-md) !important;
+        gap: var(--spacing-md) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-col {
+        text-align: justify !important;
+    }
+    
+    .footer-col ul li a {
+        display: inline-block;
+        margin: 0 var(--spacing-sm) !important;
+    }
+}
+
+/* ========================================
+   10. FLEX & GRID SAFETY
+   ======================================== */
+
+/* Đảm bảo không tràn ngang */
+.home-products,
+.dtud-products-row,
+.dtud-banners-row,
+.fs-product-list {
+    flex-wrap: wrap !important;
+    overflow-x: auto !important;
+    overflow-x: visible !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Brand arc track */
+.brand-arc-track {
+    padding: 50px 20px !important;
+}
+
+@media (max-width: 767px) {
+    .brand-arc-track {
+        padding: 30px 15px !important;
+    }
+    
+    .brand-card {
+        min-width: 120px !important;
+    }
+    
+    .brand-img-box img {
+        height: 150px !important;
+    }
+}
+
+/* ========================================
+   11. UTILITIES
+   ======================================== */
+
+/* Responsive display */
+.hide-mobile {
+    display: none !important;
+}
+
+.hide-tablet {
+    display: block !important;
+}
+
+.hide-desktop {
+    display: block !important;
+}
+
+@media (min-width: 768px) {
+    .hide-mobile {
+        display: block !important;
+    }
+    
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   12. ADDITIONAL MOBILE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 767px) {
+    /* Adjust button sizes */
+    .btn, .card-button, .filter-btn, .search-btn {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        height: 36px !important;
+    }
+    
+    /* Form controls */
+    input, textarea, select {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+        padding: 8px 10px !important;
+    }
+    
+    /* Fix image overflow */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ========================================
+   13. PRINT STYLES
+   ======================================== */
+
+@media print {
+    .mobile-menu,
+    .cart-container,
+    .modal {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+}
+/* ============================================
+   MOBILE HAMBURGER MENU & RESPONSIVE FIX
+   ============================================ */
+
+/* ===== HAMBURGER BUTTON (Mobile Only) ===== */
+.mobile-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    order: -1;
+    margin-right: 10px;
+}
+
+.mobile-hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 991px) {
+    .mobile-hamburger {
+        display: flex;
+    }
+    
+    /* Hide desktop search on tablet/mobile */
+    #searchBoxDesktop {
+        display: none !important;
+    }
+}
+
+/* ===== MOBILE MENU SIDEBAR ===== */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transition: left 0.4s ease;
+    overflow-y: auto;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+/* Mobile Menu Header */
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #ff6b00;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.mobile-menu-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-mobile-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile Search Box */
+.mobile-search-box {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.mobile-search-box i {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+}
+
+.mobile-search-box input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+.mobile-search-box input:focus {
+    border-color: #ff6b00;
+    box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.1);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    padding: 10px 0;
+}
+
+.mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-list > li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-list a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.mobile-nav-list a:active,
+.mobile-nav-list a:hover {
+    background-color: #fff5ed;
+    color: #ff6b00;
+}
+
+.mobile-nav-list i {
+    width: 20px;
+    text-align: center;
+    color: #ff6b00;
+}
+
+/* Mobile Submenu */
+.mobile-submenu .submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-submenu .submenu-toggle i:last-child {
+    transition: transform 0.3s;
+    font-size: 12px;
+}
+
+.mobile-submenu.active .submenu-toggle i:last-child {
+    transform: rotate(180deg);
+}
+
+.mobile-submenu-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9;
+}
+
+.mobile-submenu.active .mobile-submenu-list {
+    display: block;
+}
+
+.mobile-submenu-list li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-submenu-list a {
+    padding: 12px 20px 12px 50px;
+    font-size: 13px;
+    color: #555;
+}
+
+.mobile-submenu-list a:active,
+.mobile-submenu-list a:hover {
+    background-color: #fff5ed;
+    color: #ff6b00;
+}
+
+/* ===== HEADER RESPONSIVE ===== */
+@media (max-width: 576px) {
+    .header-main {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    
+    .header-middle-right-list {
+        gap: 10px !important;
+    }
+    
+    .header-middle-right-item span {
+        display: none;
+    }
+    
+    .header-middle-right-item i {
+        margin-right: 0 !important;
+    }
+    
+    .text-tk {
+        display: none;
+    }
+}
+
+/* ===== TYPOGRAPHY RESPONSIVE ===== */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: clamp(13px, 2.5vw, 16px);
+}
+
+h1 {
+    font-size: clamp(24px, 6vw, 36px);
+}
+
+h2 {
+    font-size: clamp(20px, 5vw, 28px);
+}
+
+h3 {
+    font-size: clamp(16px, 4vw, 22px);
+}
+
+h4 {
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+h5, h6 {
+    font-size: clamp(12px, 2.5vw, 16px);
+}
+
+p {
+    font-size: clamp(12px, 2vw, 15px);
+    line-height: 1.6;
+}
+
+small {
+    font-size: clamp(10px, 1.8vw, 13px);
+}
+
+/* ===== PRODUCT GRID RESPONSIVE ===== */
+.home-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .home-products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .home-products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .home-products {
+        grid-template-columns: 1fr;
+    }
+}
+
+.col-product {
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.card-product {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-image {
+    height: auto;
+    aspect-ratio: 1;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.card-image:hover {
+    transform: scale(1.05);
+}
+
+.card-title-link {
+    color: #333;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 600;
+}
+
+.product-price .current-price {
+    color: #ff7a00;
+    font-weight: 600;
+    font-size: clamp(13px, 2.5vw, 15px);
+}
+
+.product-price .old-price {
+    text-decoration: line-through;
+    color: #808080;
+    font-size: clamp(11px, 2vw, 13px);
+    margin-left: 5px;
+}
+
+.card-button {
+    background-color: #ff7a00;
+    outline: none;
+    border: none;
+    width: 85%;
+    padding: 7px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: clamp(11px, 2vw, 13px);
+}
+
+/* ===== BANNER RESPONSIVE ===== */
+.hero-slider img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hero-slider img {
+        max-height: 300px;
+    }
+    
+    .hero-slide {
+        flex-direction: column;
+    }
+    
+    .hero-slide img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slider img {
+        max-height: 200px;
+    }
+}
+
+/* ===== CONTAINER & SPACING RESPONSIVE ===== */
+.container {
+    max-width: 1130px;
+    padding: 0 clamp(10px, 3vw, 20px);
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body, * {
+    box-sizing: border-box;
+}
+
+/* Section Spacing */
+section {
+    padding: clamp(20px, 5vw, 40px) 0;
+}
+
+.home-title-block {
+    padding: clamp(10px, 2vw, 20px) clamp(5px, 2vw, 10px) clamp(10px, 2vw, 20px);
+    scroll-margin-top: 80px;
+}
+
+.home-service {
+    margin: clamp(10px, 2vw, 30px) 0;
+    gap: clamp(10px, 2vw, 20px);
+    padding: clamp(10px, 2vw, 15px);
+}
+
+.home-service-item {
+    width: 100%;
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .home-service {
+        flex-wrap: wrap;
+    }
+    
+    .home-service-item {
+        min-width: calc(50% - 10px);
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-service-item {
+        min-width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== MODAL RESPONSIVE ===== */
+.modal-container {
+    width: 95vw;
+    max-width: 585px;
+    max-height: 85vh;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+@media (max-width: 576px) {
+    .modal-container {
+        width: 95vw;
+        max-width: 100%;
+    }
+    
+    .product-detail .modal-container {
+        width: 95vw;
+    }
+    
+    .signup-login .modal-container {
+        width: 95vw;
+    }
+    
+    .detail-order .modal-container {
+        width: 95vw;
+    }
+}
+
+/* ===== OVERFLOW FIX ===== */
+.main-wrapper {
+    overflow: hidden;
+    padding-top: 60px;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ===== MENU LIST RESPONSIVE ===== */
+.menu-list {
+    display: flex;
+    height: 49px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 0;
+}
+
+.menu-link {
+    color: #000;
+    display: inline-block;
+    padding: 15px clamp(10px, 2vw, 20px);
+    text-transform: uppercase;
+    position: relative;
+    font-size: clamp(12px, 2vw, 15px);
+    white-space: nowrap;
+}
+
+/* ===== FORM RESPONSIVE ===== */
+.form-search-input {
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+@media (max-width: 768px) {
+    .form-search-input {
+        padding: 10px 15px;
+    }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.dnone {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* ===== FLEXBOX RESPONSIVE ===== */
+.flex-wrap-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 576px) {
+    .flex-wrap-mobile > * {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+}
