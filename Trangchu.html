@@ -24,7 +24,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <script src="../js/flash-sale.js"></script>
 </head>
 <body>
 <div class="top-bar">
@@ -278,19 +277,18 @@ setInterval(() => {
 }, 3000);
 </script>
 
-<!-- FLASH SALE - 1 DÒNG -->
+<!-- FLASH SALE - 1 DÒNG, 5 SẢN PHẨM -->
 <style>
 :root {
     --cam-guardian: #ff6b00;
     --cam-nhat: #fff5ed;
-    --den-timer: #1a1a1a;
 }
 
 .fs-wrapper {
     background: linear-gradient(135deg, #fff5ed 0%, #fffbf7 100%);
     border: 2px solid #ff6b00;
     border-radius: 15px;
-    padding: 20px;
+    padding: 20px 20px;
     max-width: 1350px;
     margin: 30px auto;
     font-family: 'Be Vietnam Pro', Arial, sans-serif;
@@ -308,10 +306,8 @@ setInterval(() => {
     color: #ff6b00;
     font-size: 28px;
     font-weight: 800;
-    display: flex;
-    align-items: center;
-    gap: 10px;
     white-space: nowrap;
+    margin: 0;
 }
 
 .fs-timer-container {
@@ -353,31 +349,23 @@ setInterval(() => {
     flex: 1;
     overflow: hidden;
     border-radius: 10px;
-    height: 320px;
 }
 
 .fs-product-list {
     display: flex;
     gap: 15px;
-    overflow-x: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     padding: 5px 0;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    height: 100%;
-}
-
-.fs-product-list::-webkit-scrollbar {
-    display: none;
 }
 
 .fs-card {
-    width: 210px;
-    min-width: 210px;
-    flex: 0 0 210px;
+    width: 220px;
+    min-width: 220px;
+    flex: 0 0 220px;
     background: white;
     border-radius: 10px;
-    padding: 12px;
+    padding: 15px;
     text-align: center;
     border: 1px solid #f0f0f0;
     transition: all 0.3s ease;
@@ -386,6 +374,7 @@ setInterval(() => {
     position: relative;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .fs-card:hover {
@@ -398,52 +387,51 @@ setInterval(() => {
     width: 100%;
     height: 140px;
     object-fit: contain;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .fs-card-name {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: #333;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 10px;
-    height: 28px;
+    height: 32px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    flex-grow: 1;
 }
 
 .fs-card-price {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
     margin-top: auto;
 }
 
 .fs-price-old {
     color: #aaa;
     text-decoration: line-through;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .fs-price-new {
     color: #e02020;
     font-weight: 800;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .fs-sale-badge {
     position: absolute;
-    top: 8px;
-    left: 8px;
+    top: 10px;
+    left: 10px;
     background: #e02020;
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: bold;
 }
 
@@ -454,7 +442,7 @@ setInterval(() => {
     width: 45px;
     height: 45px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 22px;
     color: #ff6b00;
     display: flex;
     justify-content: center;
@@ -466,7 +454,6 @@ setInterval(() => {
 .nav-btn:hover {
     background: #ff6b00;
     color: white;
-    transform: scale(1.1);
 }
 
 .nav-btn:active {
@@ -489,7 +476,7 @@ setInterval(() => {
     </div>
 
     <div class="fs-slider-wrapper">
-        <button class="nav-btn btn-prev">‹</button>
+        <button class="nav-btn btn-prev" onclick="scrollPrev()">‹</button>
         
         <div class="fs-container">
             <div class="fs-product-list" id="flashSaleList">
@@ -572,12 +559,60 @@ setInterval(() => {
                         <span class="fs-price-new">252.000đ</span>
                     </div>
                 </a>
+
+                <a href="Chitietsanpham.html?id=209" class="fs-card">
+                    <span class="fs-sale-badge">-18%</span>
+                    <img src="../images/uu dai 5.jpg" alt="product" class="fs-card-image">
+                    <div class="fs-card-name">Gel Rửa Mặt Sạch Sâu Lành Tính</div>
+                    <div class="fs-card-price">
+                        <span class="fs-price-old">150.000đ</span>
+                        <span class="fs-price-new">123.000đ</span>
+                    </div>
+                </a>
+
+                <a href="Chitietsanpham.html?id=210" class="fs-card">
+                    <span class="fs-sale-badge">-40%</span>
+                    <img src="../images/uu dai4.jpg" alt="product" class="fs-card-image">
+                    <div class="fs-card-name">Bộ Chăm Sóc Toàn Thân Hàn Quốc</div>
+                    <div class="fs-card-price">
+                        <span class="fs-price-old">600.000đ</span>
+                        <span class="fs-price-new">360.000đ</span>
+                    </div>
+                </a>
             </div>
         </div>
 
-        <button class="nav-btn btn-next">›</button>
+        <button class="nav-btn btn-next" onclick="scrollNext()">›</button>
     </div>
 </div>
+
+<script>
+let currentPosition = 0;
+const itemWidth = 220; // 220px width + 15px gap = 235px
+const gap = 15;
+const itemsPerView = 5;
+const totalItems = 10;
+
+function scrollNext() {
+    const maxScroll = (totalItems - itemsPerView) * (itemWidth + gap);
+    if (currentPosition < maxScroll) {
+        currentPosition += itemWidth + gap;
+        updateScroll();
+    }
+}
+
+function scrollPrev() {
+    if (currentPosition > 0) {
+        currentPosition -= itemWidth + gap;
+        updateScroll();
+    }
+}
+
+function updateScroll() {
+    const list = document.getElementById('flashSaleList');
+    list.style.transform = `translateX(-${currentPosition}px)`;
+}
+</script>
 
 </body>
 </html>
