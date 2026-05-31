@@ -944,12 +944,11 @@ setInterval(() => {
         margin-top: 15px;
     }
 
-    /* KHUNG CHỨA DANH SÁCH - SCROLL NẰM BÊN TRONG */
     .fs-container {
         flex: 1;
         overflow: hidden;
         border-radius: 10px;
-        background: white;
+        background: rgba(255, 255, 255, 0);
         position: relative;
     }
 
@@ -957,10 +956,11 @@ setInterval(() => {
         display: flex;
         gap: 15px;
         padding: 10px;
-        overflow-x: auto;
+        overflow-x: scroll !important;
         scroll-behavior: smooth;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        min-width: min-content;
     }
 
     .fs-product-list::-webkit-scrollbar {
@@ -996,7 +996,14 @@ setInterval(() => {
         object-fit: contain;
         margin-bottom: 8px;
     }
+.fs-container {
+    overflow: hidden !important;
+}
 
+.fs-product-list {
+    overflow-x: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+}
     .fs-card h4 {
         font-size: 13px;
         color: #333;
@@ -1099,6 +1106,19 @@ setInterval(() => {
             height: 120px;
         }
     }
+    #fs-container-box {
+    overflow: hidden !important;
+    flex: 1 !important;
+}
+
+#fs-slider-list {
+    display: flex !important;
+    overflow-x: scroll !important;
+    scroll-behavior: smooth !important;
+    gap: 15px !important;
+    padding: 10px !important;
+    scrollbar-width: none !important;
+}
 </style>
 
 <div class="fs-wrapper">
@@ -1117,7 +1137,7 @@ setInterval(() => {
         <button type="button" class="fs-nav-btn" id="fs-btn-prev" title="Scroll trái">❮</button>
         
         <!-- KHUNG CHỨA DANH SÁCH -->
-        <div class="fs-container">
+        <div class="fs-container" id="fs-container-box">
             <div class="fs-product-list" id="fs-slider-list">
                 <a href="Chitietsanpham.html?id=36" class="fs-card">
                     <div class="sale-badge">-25%</div>
@@ -1168,6 +1188,15 @@ setInterval(() => {
                         <span class="new-price">68.000đ</span>
                     </div>
                 </a>
+                <a href="Chitietsanpham.html?id=115" class="fs-card">
+                    <div class="sale-badge">-20%</div>
+                    <img src="../images/SP5.JPG" alt="SP5">
+                    <h4>Son Dưỡng Môi Cấp Ẩm Chuyên Sâu 24h</h4>
+                    <div class="price-group">
+                        <span class="old-price">85.000đ</span>
+                        <span class="new-price">68.000đ</span>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -1176,53 +1205,34 @@ setInterval(() => {
 </div>
 
 <script>
-// ✅ FLASH SALE SLIDER - SCROLL NẰM TRONG KHUNG
-document.addEventListener('DOMContentLoaded', function() {
-    const sliderList = document.getElementById('fs-slider-list');
+window.addEventListener('load', function() {
+    const slider = document.getElementById('fs-slider-list');
     const btnPrev = document.getElementById('fs-btn-prev');
     const btnNext = document.getElementById('fs-btn-next');
-    
-    const scrollStep = 235; // 220px (card) + 15px (gap)
-    
-    // Nút PREV - scroll sang TRÁI
-    if (btnPrev) {
-        btnPrev.addEventListener('click', function(e) {
-            e.preventDefault();
-            sliderList.scrollBy({
-                left: -scrollStep,
-                behavior: 'smooth'
-            });
-        });
-    }
-    
-    // Nút NEXT - scroll sang PHẢI
-    if (btnNext) {
-        btnNext.addEventListener('click', function(e) {
-            e.preventDefault();
-            sliderList.scrollBy({
-                left: scrollStep,
-                behavior: 'smooth'
-            });
-        });
-    }
-});
 
-// ✅ BỘ ĐẾM THỜI GIAN
-let fsTime = 8500; 
+    btnNext.onclick = function(e) {
+        e.stopPropagation();
+        slider.scrollLeft += 235;
+    };
+
+    btnPrev.onclick = function(e) {
+        e.stopPropagation();
+        slider.scrollLeft -= 235;
+    };
+});
+document.getElementById('fs-slider-list').style.width = '2000px'
+document.getElementById('fs-slider-list').scrollLeft = 100
+// BỘ ĐẾM THỜI GIAN
+let fsTime = 8500;
 const timerInterval = setInterval(() => {
-    if(fsTime <= 0) {
-        clearInterval(timerInterval);
-        return;
-    }
+    if (fsTime <= 0) { clearInterval(timerInterval); return; }
     fsTime--;
     let h = Math.floor(fsTime / 3600);
     let m = Math.floor((fsTime % 3600) / 60);
     let s = fsTime % 60;
-    
     const hEl = document.getElementById('fs-h');
     const mEl = document.getElementById('fs-m');
     const sEl = document.getElementById('fs-s');
-    
     if (hEl) hEl.innerText = h < 10 ? '0'+h : h;
     if (mEl) mEl.innerText = m < 10 ? '0'+m : m;
     if (sEl) sEl.innerText = s < 10 ? '0'+s : s;
@@ -1458,7 +1468,6 @@ const timerInterval = setInterval(() => {
 </script>
 
 <div class="container" id="best-seller"></div>
-<!--TOP SP BÁN CHẠY-->
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -1474,7 +1483,6 @@ const timerInterval = setInterval(() => {
         body { font-family: Arial, sans-serif; background: #fdfdfd; padding: 20px; margin: 0; }
         .container { max-width: 1200px; margin: 0 auto; }
 
-        /* --- 1. SỬA DANH MỤC THÀNH LINK --- */
         .tabs { 
             display: flex; justify-content: center; gap: 20px; 
             border-bottom: 1px solid #eee; padding-bottom: 10px; list-style: none; 
@@ -1503,13 +1511,13 @@ const timerInterval = setInterval(() => {
         .section-header { text-align: center; margin: 10px 0px 30px 0px; }
         .section-title {
     color: var(--chu-den);
-    font-size: 35px; /* to hơn cho sang */
+    font-size: 35px;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 20px;
-
-    font-family: 'Playfair Display', serif; /* 👈 font chảnh */
-    letter-spacing: 2px; /* giãn chữ */
+    text-align: center;
+    font-family: 'Playfair Display', serif; 
+    letter-spacing: 2px; 
 }
         
         .tabs { display: flex; justify-content: center; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; list-style: none; }
